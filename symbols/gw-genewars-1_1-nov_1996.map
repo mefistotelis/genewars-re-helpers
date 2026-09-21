@@ -25,13 +25,26 @@
  0001:00014971       def_14452
  0001:00014B50       W?Set$:SoundConfig$n()v
  0001:00014BF0       W?GetConfigs$:Config$n()uc
+ 0001:00014FF0       LbDataLoad_
+ 0001:00015090       LbDataLoadAll_
+ 0001:000150D0       LbFileLoadAt_
+ 0001:00015280       W?LoadHeader$:LevelHeader$n(ucuc)uc
+ 0001:00015320       W?EnterText$:TextEntry$n()uc
+ 0001:00015530       W?SetupText$:TextEntry$n(pnaucuc)v
+ 0001:00015570       W?$ct:TextEntry$n()_
  0001:000156E0       jpt_159CF
+ 0001:00015710       W?PlugIn$:IFCLevel$n()v
  0001:000159BC       def_159CF
+ 0001:00015CF0       W?PullOut$:IFCLevel$n()v
+ 0001:000177C0       W?Draw$:IFCLevel$n()v
+ 0001:000179F0       W?Update$:IFCLevel$n()v
  0001:0001C560       W?ZeroVRAM$n()v
  0001:00021354       jpt_21AEB
  0001:00021D0B       def_21AEB
  0001:00024514       jpt_2473D
  0001:0002472B       def_2473D
+ 0001:000248F0       W?$ct:InfoRequester$n()_
+ 0001:00024900       W?Create$:InfoRequester$n(pnapnapnal$InfoRequesterStyle$$)v
  0001:00026628       jpt_266C0
  0001:00026638       jpt_267F1
  0001:00026727       def_266C0
@@ -39,6 +52,7 @@
  0001:0002A623       def_298CA
  0001:0002B100       jpt_2B1F7
  0001:0002B29F       def_2B1F7
+ 0001:0002C8A0       W?Update$:Computer$n()v
  0001:0002CF40       jpt_2D696
  0001:0002D63E       def_2D696
  0001:0002E0F0       jpt_2F1BF
@@ -56,6 +70,14 @@
  0001:000343E4       def_3443A
  0001:00034450       jpt_3443A
  0001:00034470       nullsub_12
+ 0001:00035670       W?KillAllSounds$:SoundManager$n()v
+ 0001:000359C0       W?ChangeAmbientSample$:SoundManager$n($SampleID$$)v
+ 0001:00035C00       W?ProcessSounds$:SoundManager$n()v
+ 0001:00036560       W?SubmitSoundRequest$:SoundManager$n(rn$SoundRequest$$)v
+ 0001:00036780       W?Sound$:SoundManager$n(pn$Thing$$$SampleID$$ucucucul)v
+ 0001:000368B0       W?Sound$:SoundManager$n(uc$SampleID$$ucucuculuc)v
+ 0001:00036980       W?Sound$:SoundManager$n(pn$Thing$$pna$BufferSubmitMode$$ucucucul)v
+ 0001:00036C80       W?Sound$:SoundManager$n(ucpna$BufferSubmitMode$$ucucuculuc)v
  0001:00037454       jpt_37873
  0001:00037514       def_37873
  0001:00037AE0       nullsub_1
@@ -92,7 +114,10 @@
  0001:0003F93C       def_3F69A
  0001:00040390       jpt_4103A
  0001:000417C3       def_4103A
+ 0001:00043960       W?DoShepherd$:PlSpec$n()v
+ 0001:00043980       W?Resync$:PlSpec$n()v
  0001:00043A20       W?InitArray$:PlSpec$n()v
+ 0001:00043A70       W?SetDrawFlags$:PlSpec$n()v
  0001:0004450C       jpt_44A31
  0001:0004453C       jpt_44EA3
  0001:00044D5E       def_44A31
@@ -113,13 +138,31 @@
  0001:00056FE0       W?InitArray$:Plant$n()v
  0001:00057900       jpt_57A0C
  0001:0005792F       def_57A0C
+ 0001:0005AE60       W?control_game$n()v
+ 0001:0005B170       W?setup_controller$n()v
+ 0001:0005B780       W?MakeScreenShotName$n(pna)pna
  0001:0005B880       W?ResetAllInputs$n()v
  0001:0005B8C0       W?SetupColorLookups$:IFCBase$n()v
+ 0001:000618B0       W?Draw$:HelpDraw$n(pn$MyGadget$$pna)v
  0001:00061AD0       W?GenericHelpDraw$:HelpDraw$n(pn$MyGadget$$pna)v
+ 0001:00061AF0       W?Log$:EventHelp$n($EventHelpType$$uc)v
+ 0001:00061B60       W?InterpolateAlts$:TopoGrid$n(ulululululululullpn[9]ucc)v
+ 0001:00062280       W?Fractalize$:TopoGrid$n(ucl)v
+ 0001:00062940       W?SetTimer$:TopoGrid$n()v
+ 0001:00062A10       W?Create$:TopoGrid$n($XY$$ucll)v
+ 0001:00062B60       W?Flat$:TopoGrid$n($XY$$ucll)v
+ 0001:00062C40       W?Crater$:TopoGrid$n($XY$$uc)v
+ 0001:00063770       W?Update$:TopoGrid$n()uc
+ 0001:00063A10       W?$ct:TopoMorpher$n()_
+ 0001:00063A40       W?Create$:TopoMorpher$n($XY$$ucll)pn$TopoGrid$$
+ 0001:00063AA0       W?Crater$:TopoMorpher$n($XY$$uc)pn$TopoGrid$$
+ 0001:00063B00       W?Flat$:TopoMorpher$n($XY$$ucll)pn$TopoGrid$$
+ 0001:00063B60       W?Update$:TopoMorpher$n()v
  0001:00064378       jpt_643B6
  0001:0006446C       def_643B6
  0001:00064990       jpt_64BCB
  0001:00064A23       def_64BCB
+ 0001:00065C80       W?find_mapxy$n(pnspnsll)v
  0001:00068370       jpt_68736
  0001:00068C87       def_68736
  0001:0006AB08       jpt_6B064
@@ -130,13 +173,18 @@
  0001:0006D21C       jpt_6DB38
  0001:0006D550       def_6DB38
  0001:0006EDB0       nullsub_13
+ 0001:0006EE60       W?SetTxtWindow$n(llll)v
+ 0001:0006F760       W?JustifyParseString$n(pn$FontInfo$$pnapna)v
  0001:0006F7C0       jpt_6F854
  0001:0006F8F8       def_6F854
+ 0001:00070D10       W?PlugIn$:IFCTitle$n()v
+ 0001:00070E30       W?PullOut$:IFCTitle$n()v
  0001:00070E9C       jpt_70ED1
  0001:00071070       def_70ED1
  0001:000713EC       jpt_71424
  0001:0007145A       def_71424
  0001:000714A0       nullsub_16
+ 0001:00072960       W?PlugIn$:IFCCustom$n()v
  0001:00072D40       jpt_72EEA
  0001:00073912       def_72EEA
  0001:000751DC       jpt_7520F
@@ -148,6 +196,10 @@
  0001:00075FBA       def_76C21
  0001:00076BCC       jpt_76C21
  0001:000785C0       W?ClearFullScreen$:MapDisplay$n()v
+ 0001:000787B0       W?SetPanelRefreshZones$:MapDisplay$n()v
+ 0001:00078810       W?CenterOn$:MapDisplay$n($XY$$)v
+ 0001:00078960       W?GetDisplayCenter$:MapDisplay$n()$XY$$
+ 0001:000789A0       W?SelectAmbientSound$:MapDisplay$n()v
  0001:00078B10       jpt_790AA
  0001:00078E87       def_790AA
  0001:00079DA4       jpt_7A0C4
@@ -160,6 +212,7 @@
  0001:00083480       _get_osfhandle_
  0001:00083490       _os_handle_
  0001:000834B0       nullsub_3
+ 0001:000834C0       W?draw_game$n()v
  0001:00083AA0       jpt_84674
  0001:00083AB8       jpt_84B26
  0001:00083AD4       jpt_83F60
@@ -190,14 +243,19 @@
  0001:00092930       W?PlayIntro$n()v
  0001:000929D0       W?PlaySmacker$n(pnaucuc)v
  0001:00092F7C       jpt_9358B
+ 0001:00093010       W?process_packets$n()v
  0001:0009315C       def_9358B
+ 0001:00093B40       W?ExchangeDataBlast$:Packet$n(pnvuluc)v
  0001:00093BB0       SoundProgressLog_
+ 0001:00093BD0       W?setup_host$n()v
  0001:00093DD0       W?reset_host$n()v
  0001:00093E40       jpt_94327
  0001:00093F30       main_
  0001:000942EF       def_94327
  0001:00094420       __full_io_exit
  0001:00094461       fcloseall
+ 0001:000944B0       W?start_game$n()v
+ 0001:00094520       W?setup_stuff$n()v
  0001:00094AA4       jpt_94D56
  0001:00094AC0       W?setup_game$n()v
  0001:00094D98       def_94D56
@@ -221,6 +279,7 @@
  0001:00096B10       mem_putc_
  0001:00096B23       sprintf_
  0001:00096C10       memset_
+ 0001:000973B0       W?InitMyAnimBank$n(pn$MyAnimBank$$)pn$MySprite$$
  0001:000976F0       GetSoundAble_
  0001:00097700       GetMusicAble_
  0001:00097790       GetSoundDriver_
@@ -246,6 +305,7 @@
  0001:000988E6       __MkTmpFile_
  0001:0009894B       __doclose_
  0001:000989E8       nullsub_4
+ 0001:00098B94       LbDataFree_
  0001:00098BBA       puts_
  0001:00098BE7       fprintf_
  0001:00098C08       fflush_
@@ -293,9 +353,17 @@
  0001:000A16F0       LbMousePlace_
  0001:000A1824       LbMouseRemove_
  0001:000A1908       LbMouseChangeSprite_
+ 0001:000A1A68       LbMouseChangeMoveRatio_
  0001:000A1AB4       LbMouseSetup_
  0001:000A1C74       LbMouseReset_
  0001:000A1CF8       LbMouseSuspend_
+ 0001:000A1D5C       LbMouseSetWindow_
+ 0001:000A1DA8       LbMouseSetPosition_
+ 0001:000A1E34       LbMouseUpdatePosition_
+ 0001:000A1E74       W?MouseHandler256$f(iii)v
+ 0001:000A21D4       W?adjust_point$n(pnlpnl)ul
+ 0001:000A222C       W?mouse_setup_range$n()ul
+ 0001:000A2340       W?screen_place$n()l
  0001:000A258C       W?screen_remove$n(ul)l
  0001:000A26F0       LbPaletteFade_
  0001:000A28A4       LbPaletteFindColour_
@@ -307,15 +375,23 @@
  0001:000A38BE       __CHP
  0001:000A38DC       j___sys_init_387_emulator
  0001:000A38E1       j___sys_fini_387_emulator
+ 0001:000A38F0       LbVesaGetGran_
+ 0001:000A3A00       LbVesaSetMode_
  0001:000A3A5C       LbVesaSetPage_
  0001:000A3AD0       LbVesaGetInfo_
+ 0001:000A3BA4       LbVesaIsModeAvailable_
+ 0001:000A3C00       LbSpriteDraw_
  0001:000A4DDA       j___clock_
  0001:000A4DE0       memmove_
+ 0001:000A8A20       W?PrepMyGadgets$n(pn$MyGadget$$pn$TbSprite$$pn$MySprite$$)ul
+ 0001:000A8B30       W?FreeMyGadgets$n(pn$MyGadget$$)v
  0001:000A9F14       __wcpp_2_ctor_array__
  0001:000A9F6A       copypart_
  0001:000A9FA0       _splitpath_
  0001:000AA079       strstr_
  0001:000AA137       atoi_
+ 0001:000AAA00       LbIffSave_
+ 0001:000AB040       W?swap_long_bytes$n(ul)ul
  0001:000AB074       unknown_libname_1
  0001:000AB091       unknown_libname_2
  0001:000AB0AD       unknown_libname_3
@@ -959,6 +1035,7 @@
  0001:000E4150       jpt_E4148
  0001:000E445A       jpt_E4453
  0001:000E83E0       jpt_E83CF
+ 0001:000E8963       setup_vecs_
  0001:000E8DF0       LbSpriteDrawUsingScalingData_
  0001:000EA668       LbSpriteSetScalingData_
  0001:000EAA00       _SmackInternal001
@@ -1003,8 +1080,16 @@
  0002:00000000       ser_start_
  0002:00000004       do_ser_start_
  0002:0000007D       debugColors
- 0003:00102E58       aDataPlanetsAnb
- 0003:00103554       aBScreen
+ 0003:00100100       poly_screen
+ 0003:00100104       _vec_screen
+ 0003:00100108       _vec_map
+ 0003:00100110       _vec_screen_width
+ 0003:00100114       _vec_window_width
+ 0003:00100118       _vec_window_height
+ 0003:0010011C       dither_map
+ 0003:00100120       dither_end
+ 0003:00102E58       W?level_data$n[]$TbLoadFiles$$
+ 0003:00103554       W?startup_files$n[]$TbLoadFiles$$
  0003:00103580       aDataMainPal
  0003:00103630       aDataBuildingBg
  0003:001036E0       aDataBuildingBw
@@ -1035,14 +1120,16 @@
  0003:00104848       aBulb
  0003:00104867       aDroot
  0003:001051D0       aDataLpanelAnb
+ 0003:001058AC       W?titleTPI$n$TurnPrintInfo$$
+ 0003:0010591C       W?textTPI$n$TurnPrintInfo$$
  0003:00105BAD       aZy
  0003:00105E58       aDataFilescrAnb
- 0003:00105EE8       aDataIftitleAnb
+ 0003:00105EE8       W?titleGfx_files$n[]$TbLoadFiles$$
  0003:00105F40       aDataFont2Dat
  0003:001060CC       aDataWinscrPal
  0003:00106124       aDataLosescrPal
  0003:0010617C       aDataQuitPal
- 0003:0010622C       aDataIfcustomAn
+ 0003:0010622C       W?customGfx_files$n[]$TbLoadFiles$$
  0003:00106310       aExceland
  0003:001078A0       aDataFont2Tab
  0003:0010797C       aSound
@@ -1058,6 +1145,7 @@
  0003:0010AA53       aZxcvbnm
  0003:0010AB2C       __8087
  0003:0010AB2D       __real87
+ 0003:0010ABA5       W?MyGDelay$nuc
  0003:0010ABA8       W?MyGHelpDelay$nl
  0003:0010ABB0       NetTimeoutTicks
  0003:0010AC14       W?com_dev$n[]$ComHandlerInfo$$
@@ -1987,16 +2075,28 @@
  0003:00111A35       aTotalLossOfSig
  0003:00111A50       aPartialLossOfS
  0003:00111A6D       aIn
+ 0003:00111AE4       W?$Wvf0eo2i8:IFCLevel$$nx[]pn()v
  0003:0011247C       _IsTable
  0003:001125DF       aNeduit
  0003:00112760       jpt_E0E7E
- 0003:00114C9C       inp
- 0003:00114CA8       a1
+ 0003:00114C88       W?block_mem$npnuc
+ 0003:00114C8C       W?aBlockMem$npnuc
+ 0003:00114C9C       W?palette$npnuc
+ 0003:00114CA0       W?b_screen$npnuc
+ 0003:00114CA8       this
+ 0003:001157E8       W?currentIFC$npn$IFCBase$$
+ 0003:001157F0       W?pullOut$:IFCBase$npn$1$
+ 0003:001157F4       W?packet$:IFCBase$npn$Packet$$
+ 0003:001157F8       W?fullCopyToVRAM$:IFCBase$nuc
  0003:001157FC       a2
- 0003:0011581C       out
+ 0003:0011581C       W?cyanTables$n[][256]uc
+ 0003:00115A1C       W?redTables$n[][256]uc
+ 0003:00115C1C       W?iceTables$n[][256]uc
  0003:00117431       W?localPlayer$nuc
  0003:00117464       W?control$n$GameControl$$__Flags___bf0
+ 0003:00117480       control__NoPlayers
  0003:00117660       W?runFlags$n$RunTimeGameFlags$$_0
+ 0003:001179C0       W?packets$n[]$Packet$$
  0003:00117A3C       bio__players
  0003:00119670       unkn_buf_119670
  0003:00152F86       W?bio$n$BioGame$$__creatures
@@ -2008,6 +2108,8 @@
  0003:0016BADE       W?bio$n$BioGame$$__drones
  0003:0016C6FE       W?bio$n$BioGame$$__unkarr01
  0003:0016CD70       W?mapDisplay$n$MapDisplay$$
+ 0003:0016DF4C       W?snd$n$SoundManager$$
+ 0003:00180BCC       W?helper$n$HelpDraw$$
  0003:00184786       W?woodDiskMMs$_Creature$n$MyMinSprite$$__delta
  0003:0018478E       W?heartMMs$_Creature$n$MyMinSprite$$__delta
  0003:0018478F       W?heartMMs$_Creature$n$MyMinSprite$$__fullDelay
@@ -2018,8 +2120,12 @@
  0003:001847B6       W?tiredMMs$_Creature$n$MyMinSprite$$__delta
  0003:001847BE       W?scaredMMs$_Creature$n$MyMinSprite$$__delta
  0003:001847C6       W?huntingMMs$_Creature$n$MyMinSprite$$__delta
+ 0003:00184800       W?textEntry$n$TextEntry$$
+ 0003:00184806       textEntry__IsActive
+ 0003:00186BF4       W?scratch$npnuc
  0003:00186C2C       _lbMemoryAvailable
  0003:00186C48       W?memory_blocks$n__$mem_block$$__memblk_2
+ 0003:00188A42       W?fullUpdate$nuc
  0003:00188A54       _fade_table
  0003:0018CA54       _ghost_table
  0003:0019CA58       _lbDisplay
@@ -2033,6 +2139,14 @@
  0003:0019CA7C       lbDisplay__GraphicsScreenHeight
  0003:0019CA88       lbDisplay__GraphicsWindowWidth
  0003:0019CA8C       lbDisplay__GraphicsWindowHeight
+ 0003:0019CA90       lbDisplay__MouseWindowX
+ 0003:0019CA94       lbDisplay__MouseWindowY
+ 0003:0019CA98       lbDisplay__MouseWindowWidth
+ 0003:0019CA9C       lbDisplay__MouseWindowHeight
+ 0003:0019CAA0       lbDisplay__MouseX
+ 0003:0019CAA4       lbDisplay__MouseY
+ 0003:0019CAA8       lbDisplay__MMouseX
+ 0003:0019CAAC       lbDisplay__MMouseY
  0003:0019CAB8       lbDisplay__DrawFlags
  0003:0019CABA       lbDisplay__OldVideoMode
  0003:0019CABC       lbDisplay__ScreenMode
@@ -2045,6 +2159,8 @@
  0003:0019CAC4       lbDisplay__MMiddleButton
  0003:0019CAF0       _lbKeyOn
  0003:0019CBF0       _lbInkey
+ 0003:0019CBF6       W?refresh_HR$n[][20]uc
+ 0003:0019CBF7       refresh_HR_p1
  0003:0019CD24       W?cur_flag$:.0$:?LbScreenSetDoubleBuffering$n(ul)ulnul
  0003:0019CD28       W?cur_flag$:.0$:?LbScreenSetWScreenInVideo$n(ul)ulnul
  0003:0019CD2C       _lbScreenDirectAccessActive
@@ -2058,9 +2174,25 @@
  0003:0019CE1A       W?samples_currently_fading$nyuc
  0003:0019CE28       _lbMouseInstalled
  0003:0019CE2C       W?mbuffer$n$mouse_buffer$$
+ 0003:0019CE30       mbuffer__Width
+ 0003:0019CE34       mbuffer__Height
+ 0003:0019CE3C       mbuffer__Buffer
+ 0003:0019DE3C       mbuffer__X
+ 0003:0019DE40       mbuffer__Y
+ 0003:0019DE44       mbuffer__XOffset
+ 0003:0019DE48       mbuffer__YOffset
+ 0003:0019DE4C       minfo__XMoveRatio
+ 0003:0019DE50       minfo__YMoveRatio
+ 0003:0019DE54       minfo__XSpriteOffset
+ 0003:0019DE58       minfo__YSpriteOffset
+ 0003:0019DE5C       minfo__Sprite
  0003:0019EE5C       W?redraw_active$nul
  0003:0019EE60       W?mouse_initialised$nul
+ 0003:0019EE68       W?mouse_dx$nyl
+ 0003:0019EE6C       W?mouse_dy$nyl
+ 0003:0019EE70       W?mouse_pos_change_saved$nul
  0003:0019F484       _lbVesaData
+ 0003:0019F490       W?MyGadgets$npn$MyGadget$$
  0003:0019F4B0       W?MyGadgetHelpDraw$npn(pn$MyGadget$$pna)v
  0003:0019F651       lbICommSessionActive
  0003:0019F654       W?NetworkServicePtr$n$TbNetworkService$$__Id
