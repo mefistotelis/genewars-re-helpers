@@ -2,9 +2,15 @@
 <?program_dtd version="1"?>
 
 <PROGRAM NAME="GW.EXE" EXE_PATH="D:\source\disasm\genewars_final_patch\GW.EXE" EXE_FORMAT="Linear Executable (LE)" INPUT_MD5="&#xba;oY&#xba;&#xcd;0&#x98;&#xf3;[4&#x96;&#x8b;**">
-    <INFO_SOURCE TOOL="IDA-Pro 8.3 XML plugin v5.0.2 (Python) SDK 830" USER="tomasz" FILE="D:\source\disasm\bf_genewars_final_patch\gw-genewars-1_1-nov_1996.idb" TIMESTAMP="2026-08-30 14:47" />
+    <INFO_SOURCE TOOL="IDA-Pro 8.3 XML plugin v5.0.2 (Python) SDK 830" USER="tomasz" FILE="D:\source\disasm\bf_genewars_final_patch\gw-genewars-1_1-nov_1996.idb" TIMESTAMP="2026-09-21 12:56" />
     <PROCESSOR NAME="metapc" ENDIAN="little" ADDRESS_MODEL="32-bit" />
     <COMPILER NAME="Watcom C++" />
+    <DATATYPES>
+        <STRUCTURE NAME="Player" SIZE="0x70D">
+            <MEMBER OFFSET="0x0" NAME="field_0" DATATYPE="byte" SIZE="0x70C" />
+            <MEMBER OFFSET="0x70C" NAME="field_70C" DATATYPE="byte" SIZE="0x1" />
+        </STRUCTURE>
+    </DATATYPES>
     <MEMORY_MAP>
         <MEMORY_SECTION NAME="cseg01" START_ADDR="0x10000" LENGTH="0xDF000">
             <MEMORY_CONTENTS START_ADDR="0x10000" FILE_NAME="gw-genewars-1_1-nov_1996.bytes" FILE_OFFSET="0x0" LENGTH="0xDF000" />
@@ -4595,10 +4601,10 @@
             <TYPEINFO_CMT>byte_10AB29</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10AB2C" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_10AB2C</TYPEINFO_CMT>
+            <TYPEINFO_CMT>__8087</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10AB2D" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_10AB2D</TYPEINFO_CMT>
+            <TYPEINFO_CMT>__real87</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10ABA5" DATATYPE="byte" SIZE="0x1">
             <TYPEINFO_CMT>byte_10ABA5</TYPEINFO_CMT>
@@ -4704,13 +4710,13 @@
             <TYPEINFO_CMT>_CurrentSoundMasterVolume</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10B4F8" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_10B4F8</TYPEINFO_CMT>
+            <TYPEINFO_CMT>__GDAptr</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10B4FC" DATATYPE="word" SIZE="0x2">
-            <TYPEINFO_CMT>word_10B4FC</TYPEINFO_CMT>
+            <TYPEINFO_CMT>__D16Infoseg</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10B4FE" DATATYPE="word" SIZE="0x2">
-            <TYPEINFO_CMT>word_10B4FE</TYPEINFO_CMT>
+            <TYPEINFO_CMT>__x386_zero_base_selector</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10B500" DATATYPE="dword" SIZE="0x4">
             <TYPEINFO_CMT>dword_10B500</TYPEINFO_CMT>
@@ -4734,16 +4740,16 @@
             <TYPEINFO_CMT>dword_10B514</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10B518" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_10B518</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_MusicAble</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10B519" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_10B519</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_MusicActive</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10B51A" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_10B51A</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_CurrentDangerMusicFadeDirection</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10B51B" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_10B51B</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_DangerMusicVolumeChange</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10B51C" DATATYPE="dword" SIZE="0x4">
             <TYPEINFO_CMT>dword_10B51C</TYPEINFO_CMT>
@@ -4812,10 +4818,10 @@
             <TYPEINFO_CMT>word_10B754</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10B756" DATATYPE="word" SIZE="0x2">
-            <TYPEINFO_CMT>word_10B756</TYPEINFO_CMT>
+            <TYPEINFO_CMT>hook_in_emu__L_S4</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10B758" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_10B758</TYPEINFO_CMT>
+            <TYPEINFO_CMT>hook_in_emu__L_S5</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10B75C" DATATYPE="dword" SIZE="0x4">
             <TYPEINFO_CMT>dword_10B75C</TYPEINFO_CMT>
@@ -4851,13 +4857,13 @@
             <TYPEINFO_CMT>word_10B78C</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10B78E" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_10B78E</TYPEINFO_CMT>
+            <TYPEINFO_CMT>__Extender</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10B78F" DATATYPE="byte" SIZE="0x1">
             <TYPEINFO_CMT>byte_10B78F</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10B790" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_10B790</TYPEINFO_CMT>
+            <TYPEINFO_CMT>__X32VM</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10B791" DATATYPE="dword" SIZE="0x4">
             <TYPEINFO_CMT>dword_10B791</TYPEINFO_CMT>
@@ -4949,10 +4955,10 @@
             <TYPEINFO_CMT>dword_10B998</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10B99C" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_10B99C</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_disk_err</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10B9A0" DATATYPE="pointer" SIZE="0x4">
-            <TYPEINFO_CMT>off_10B9A0</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_MEM_alloc</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10B9A4" DATATYPE="pointer" SIZE="0x4">
             <TYPEINFO_CMT>off_10B9A4</TYPEINFO_CMT>
@@ -5354,7 +5360,7 @@
             <TYPEINFO_CMT>dword_10CF44</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10CF6C" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_10CF6C</TYPEINFO_CMT>
+            <TYPEINFO_CMT>___end_dst</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10CF70" DATATYPE="dword" SIZE="0x4">
             <TYPEINFO_CMT>dword_10CF70</TYPEINFO_CMT>
@@ -5362,24 +5368,29 @@
         <DEFINED_DATA ADDRESS="0x10CF74" DATATYPE="dword" SIZE="0x4">
             <TYPEINFO_CMT>dword_10CF74</TYPEINFO_CMT>
         </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x10CF90" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_10CF90</TYPEINFO_CMT>
+        <DEFINED_DATA ADDRESS="0x10CF90" DATATYPE="string" SIZE="0x4">
+            <TYPEINFO_CMT>_timezone</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10CF94" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_10CF94</TYPEINFO_CMT>
+            <TYPEINFO_CMT>___dst_adjust</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10CF98" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_10CF98</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_daylight</TYPEINFO_CMT>
         </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x10CFBB" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_10CFBB</TYPEINFO_CMT>
+        <DEFINED_DATA ADDRESS="0x10CF9C" DATATYPE="string" SIZE="0x1F">
+            <TYPEINFO_CMT>_stzone</TYPEINFO_CMT>
         </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x10CFDA" DATATYPE="pointer" SIZE="0x4" />
+        <DEFINED_DATA ADDRESS="0x10CFBB" DATATYPE="string" SIZE="0x1F">
+            <TYPEINFO_CMT>_dtzone</TYPEINFO_CMT>
+        </DEFINED_DATA>
+        <DEFINED_DATA ADDRESS="0x10CFDA" DATATYPE="pointer" SIZE="0x4">
+            <TYPEINFO_CMT>_tzname</TYPEINFO_CMT>
+        </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10CFDE" DATATYPE="pointer" SIZE="0x4">
             <TYPEINFO_CMT>off_10CFDE</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10CFE2" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_10CFE2</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_tzFlag</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10CFE8" DATATYPE="dword" SIZE="0x4">
             <TYPEINFO_CMT>dword_10CFE8</TYPEINFO_CMT>
@@ -5513,7 +5524,9 @@
         <DEFINED_DATA ADDRESS="0x10D478" DATATYPE="dword" SIZE="0x4">
             <TYPEINFO_CMT>dword_10D478</TYPEINFO_CMT>
         </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x10D47C" DATATYPE="pointer" SIZE="0x4" />
+        <DEFINED_DATA ADDRESS="0x10D47C" DATATYPE="pointer" SIZE="0x4">
+            <TYPEINFO_CMT>_MathFuncNames</TYPEINFO_CMT>
+        </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10D480" DATATYPE="pointer" SIZE="0x4" />
         <DEFINED_DATA ADDRESS="0x10D484" DATATYPE="pointer" SIZE="0x4" />
         <DEFINED_DATA ADDRESS="0x10D488" DATATYPE="pointer" SIZE="0x4" />
@@ -5537,7 +5550,7 @@
         <DEFINED_DATA ADDRESS="0x10D4D0" DATATYPE="pointer" SIZE="0x4" />
         <DEFINED_DATA ADDRESS="0x10D4D4" DATATYPE="pointer" SIZE="0x4" />
         <DEFINED_DATA ADDRESS="0x10D4D8" DATATYPE="pointer" SIZE="0x4">
-            <TYPEINFO_CMT>off_10D4D8</TYPEINFO_CMT>
+            <TYPEINFO_CMT>__RWD_matherr</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x10D4DC" DATATYPE="string" SIZE="0x12">
             <TYPEINFO_CMT>aSpeechMisc14Wa</TYPEINFO_CMT>
@@ -9439,7 +9452,7 @@
             <TYPEINFO_CMT>dword_114C98</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x114C9C" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_114C9C</TYPEINFO_CMT>
+            <TYPEINFO_CMT>inp</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x114CA0" DATATYPE="dword" SIZE="0x4">
             <TYPEINFO_CMT>dword_114CA0</TYPEINFO_CMT>
@@ -9448,7 +9461,7 @@
             <TYPEINFO_CMT>dword_114CA4</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x114CA8" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>name</TYPEINFO_CMT>
+            <TYPEINFO_CMT>a1</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x114CAC" DATATYPE="dword" SIZE="0x4">
             <TYPEINFO_CMT>dword_114CAC</TYPEINFO_CMT>
@@ -9793,7 +9806,10 @@
             <TYPEINFO_CMT>byte_115818</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x11581C" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_11581C</TYPEINFO_CMT>
+            <TYPEINFO_CMT>out</TYPEINFO_CMT>
+        </DEFINED_DATA>
+        <DEFINED_DATA ADDRESS="0x11591C" DATATYPE="byte" SIZE="0x1">
+            <TYPEINFO_CMT>byte_11591C</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x115A1C" DATATYPE="byte" SIZE="0x1">
             <TYPEINFO_CMT>byte_115A1C</TYPEINFO_CMT>
@@ -9817,7 +9833,7 @@
             <TYPEINFO_CMT>dword_11742C</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x117431" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_117431</TYPEINFO_CMT>
+            <TYPEINFO_CMT>char localPlayer</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x117434" DATATYPE="dword" SIZE="0x4">
             <TYPEINFO_CMT>dword_117434</TYPEINFO_CMT>
@@ -9930,10 +9946,7 @@
         <DEFINED_DATA ADDRESS="0x11765C" DATATYPE="byte" SIZE="0x1">
             <TYPEINFO_CMT>byte_11765C</TYPEINFO_CMT>
         </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x117660" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_117660</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x117661" DATATYPE="byte" SIZE="0x1">
+        <DEFINED_DATA ADDRESS="0x117660" DATATYPE="word" SIZE="0x2">
             <TYPEINFO_CMT>RunTimeGameFlags runFlags</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x117662" DATATYPE="byte" SIZE="0x1">
@@ -9972,98 +9985,8 @@
         <DEFINED_DATA ADDRESS="0x117A11" DATATYPE="byte" SIZE="0x1">
             <TYPEINFO_CMT>byte_117A11</TYPEINFO_CMT>
         </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x117A3C" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_117A3C</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x117A3E" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_117A3E</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x117A3F" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_117A3F</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x117A45" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_117A45</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x117A49" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_117A49</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x117A4D" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_117A4D</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x117A69" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_117A69</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x117ED5" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_117ED5</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x117ED9" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_117ED9</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x117EDE" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_117EDE</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x117EDF" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_117EDF</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x117EE3" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_117EE3</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x118028" DATATYPE="word" SIZE="0x2">
-            <TYPEINFO_CMT>word_118028</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x118030" DATATYPE="word" SIZE="0x2">
-            <TYPEINFO_CMT>word_118030</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x118036" DATATYPE="word" SIZE="0x2">
-            <TYPEINFO_CMT>word_118036</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x118038" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_118038</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x118043" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_118043</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x118048" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_118048</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x118052" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_118052</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x118056" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_118056</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x1180EA" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_1180EA</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x11811C" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_11811C</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x11811E" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_11811E</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x118122" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_118122</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x118123" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_118123</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x118124" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_118124</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x118135" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_118135</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x118139" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_118139</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x11813D" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_11813D</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x118141" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_118141</TYPEINFO_CMT>
-        </DEFINED_DATA>
-        <DEFINED_DATA ADDRESS="0x118145" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_118145</TYPEINFO_CMT>
+        <DEFINED_DATA ADDRESS="0x117A3C" DATATYPE="Player" SIZE="0x70D">
+            <TYPEINFO_CMT>bio__players</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x1185EC" DATATYPE="dword" SIZE="0x4">
             <TYPEINFO_CMT>dword_1185EC</TYPEINFO_CMT>
@@ -10759,7 +10682,7 @@
             <TYPEINFO_CMT>dword_186C28</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x186C2C" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_186C2C</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_lbMemoryAvailable</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x186C30" DATATYPE="dword" SIZE="0x4">
             <TYPEINFO_CMT>dword_186C30</TYPEINFO_CMT>
@@ -10780,7 +10703,7 @@
             <TYPEINFO_CMT>dword_186C44</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x186C48" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_186C48</TYPEINFO_CMT>
+            <TYPEINFO_CMT>W?memory_blocks$n__$mem_block$$__memblk_2</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x187832" DATATYPE="dword" SIZE="0x4">
             <TYPEINFO_CMT>dword_187832</TYPEINFO_CMT>
@@ -10948,22 +10871,22 @@
             <TYPEINFO_CMT>lbDisplay__VesaIsSetUp</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x19CABF" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_19CABF</TYPEINFO_CMT>
+            <TYPEINFO_CMT>lbDisplay__LeftButton</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x19CAC0" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_19CAC0</TYPEINFO_CMT>
+            <TYPEINFO_CMT>lbDisplay__RightButton</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x19CAC1" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_19CAC1</TYPEINFO_CMT>
+            <TYPEINFO_CMT>lbDisplay__MiddleButton</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x19CAC2" DATATYPE="byte" SIZE="0x1">
             <TYPEINFO_CMT>lbDisplay__MLeftButton</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x19CAC3" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_19CAC3</TYPEINFO_CMT>
+            <TYPEINFO_CMT>lbDisplay__MRightButton</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x19CAC4" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_19CAC4</TYPEINFO_CMT>
+            <TYPEINFO_CMT>lbDisplay__MMiddleButton</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x19CAC5" DATATYPE="byte" SIZE="0x1">
             <TYPEINFO_CMT>byte_19CAC5</TYPEINFO_CMT>
@@ -11494,13 +11417,13 @@
             <TYPEINFO_CMT>byte_1A0AB8</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x1A0AB9" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_1A0AB9</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_MusicInstalled</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x1A0ABC" DATATYPE="byte" SIZE="0x1">
             <TYPEINFO_CMT>byte_1A0ABC</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x1A0AC4" DATATYPE="word" SIZE="0x2">
-            <TYPEINFO_CMT>word_1A0AC4</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_SongCurrentlyPlaying</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x1A0AC6" DATATYPE="word" SIZE="0x2">
             <TYPEINFO_CMT>word_1A0AC6</TYPEINFO_CMT>
@@ -11518,10 +11441,10 @@
             <TYPEINFO_CMT>dword_1A0AD4</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x1A0AD8" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_1A0AD8</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_SongHandle</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x1A0ADC" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_1A0ADC</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_DangerMusicFadeHandle</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x1A0AE0" DATATYPE="byte" SIZE="0x1">
             <TYPEINFO_CMT>byte_1A0AE0</TYPEINFO_CMT>
@@ -11533,13 +11456,13 @@
             <TYPEINFO_CMT>byte_1A0AE3</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x1A0AE4" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_1A0AE4</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_DangerMusicVolume</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x1A0AE5" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_1A0AE5</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_DangerMusicFadeActive</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x1A0AE6" DATATYPE="byte" SIZE="0x1">
-            <TYPEINFO_CMT>byte_1A0AE6</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_DangerMusicAble</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x1A0C94" DATATYPE="byte" SIZE="0x1">
             <TYPEINFO_CMT>_StreamedSoundAble</TYPEINFO_CMT>
@@ -12685,7 +12608,7 @@
             <TYPEINFO_CMT>dword_1A6C4C</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x1B0000" DATATYPE="dword" SIZE="0x4">
-            <TYPEINFO_CMT>dword_1B0000</TYPEINFO_CMT>
+            <TYPEINFO_CMT>tabwidth</TYPEINFO_CMT>
         </DEFINED_DATA>
         <DEFINED_DATA ADDRESS="0x1B0004" DATATYPE="byte" SIZE="0x1">
             <TYPEINFO_CMT>byte_1B0004</TYPEINFO_CMT>
@@ -12797,6 +12720,8 @@ jumptable 00012A57 default case </COMMENT>
         <COMMENT ADDRESS="0x15670" TYPE="end-of-line">width </COMMENT>
         <COMMENT ADDRESS="0x15672" TYPE="end-of-line">destX </COMMENT>
         <COMMENT ADDRESS="0x156E0" TYPE="end-of-line">jump table for switch statement </COMMENT>
+        <COMMENT ADDRESS="0x157A7" TYPE="end-of-line">a1 </COMMENT>
+        <COMMENT ADDRESS="0x157AC" TYPE="end-of-line">a4 </COMMENT>
         <COMMENT ADDRESS="0x1597E" TYPE="repeatable">jumptable 000159CF cases 0,1,4,5 </COMMENT>
         <COMMENT ADDRESS="0x15994" TYPE="repeatable">jumptable 000159CF cases 2,3,8 </COMMENT>
         <COMMENT ADDRESS="0x159A9" TYPE="repeatable">jumptable 000159CF cases 6,7 </COMMENT>
@@ -13555,8 +13480,12 @@ jumptable 000267F1 default case, cases 3,4 </COMMENT>
         <COMMENT ADDRESS="0x71D93" TYPE="end-of-line">plyr </COMMENT>
         <COMMENT ADDRESS="0x71D96" TYPE="end-of-line">name </COMMENT>
         <COMMENT ADDRESS="0x72243" TYPE="end-of-line">this </COMMENT>
+        <COMMENT ADDRESS="0x722F2" TYPE="end-of-line">a4 </COMMENT>
+        <COMMENT ADDRESS="0x722FF" TYPE="end-of-line">a3 </COMMENT>
         <COMMENT ADDRESS="0x72497" TYPE="end-of-line">buf </COMMENT>
         <COMMENT ADDRESS="0x724A7" TYPE="end-of-line">len </COMMENT>
+        <COMMENT ADDRESS="0x725E0" TYPE="end-of-line">a4 </COMMENT>
+        <COMMENT ADDRESS="0x725ED" TYPE="end-of-line">a3 </COMMENT>
         <COMMENT ADDRESS="0x72846" TYPE="end-of-line">a3 </COMMENT>
         <COMMENT ADDRESS="0x7284B" TYPE="end-of-line">a2 </COMMENT>
         <COMMENT ADDRESS="0x72856" TYPE="end-of-line">a3 </COMMENT>
@@ -13813,6 +13742,15 @@ jumptable 000267F1 default case, cases 3,4 </COMMENT>
         <COMMENT ADDRESS="0x8A27C" TYPE="end-of-line">switch 4 cases </COMMENT>
         <COMMENT ADDRESS="0x8A28B" TYPE="end-of-line">switch jump </COMMENT>
         <COMMENT ADDRESS="0x8A2A0" TYPE="end-of-line">jump table for switch statement </COMMENT>
+        <COMMENT ADDRESS="0x9296D" TYPE="end-of-line">a2 </COMMENT>
+        <COMMENT ADDRESS="0x92974" TYPE="end-of-line">a4 </COMMENT>
+        <COMMENT ADDRESS="0x92976" TYPE="end-of-line">a3 </COMMENT>
+        <COMMENT ADDRESS="0x92988" TYPE="end-of-line">a2 </COMMENT>
+        <COMMENT ADDRESS="0x92992" TYPE="end-of-line">a4 </COMMENT>
+        <COMMENT ADDRESS="0x92994" TYPE="end-of-line">a3 </COMMENT>
+        <COMMENT ADDRESS="0x9299B" TYPE="end-of-line">a4 </COMMENT>
+        <COMMENT ADDRESS="0x929A5" TYPE="end-of-line">a3 </COMMENT>
+        <COMMENT ADDRESS="0x929A7" TYPE="end-of-line">a2 </COMMENT>
         <COMMENT ADDRESS="0x92F7C" TYPE="end-of-line">jump table for switch statement </COMMENT>
         <COMMENT ADDRESS="0x9312F" TYPE="end-of-line">int </COMMENT>
         <COMMENT ADDRESS="0x93153" TYPE="repeatable">jumptable 0009358B case 26 </COMMENT>
@@ -13868,10 +13806,66 @@ jumptable 000267F1 default case, cases 3,4 </COMMENT>
         <COMMENT ADDRESS="0x942EF" TYPE="repeatable">jumptable 00094327 default case, cases 64-67,69,70,72-74,78,79,81,84-87,89,91-99,101,102,104,106,110,111,113,116-119,121 </COMMENT>
         <COMMENT ADDRESS="0x94318" TYPE="end-of-line">switch 60 cases </COMMENT>
         <COMMENT ADDRESS="0x94327" TYPE="end-of-line">switch jump </COMMENT>
+        <COMMENT ADDRESS="0x94573" TYPE="end-of-line">ib </COMMENT>
+        <COMMENT ADDRESS="0x94574" TYPE="end-of-line">ig </COMMENT>
+        <COMMENT ADDRESS="0x94575" TYPE="end-of-line">ir </COMMENT>
+        <COMMENT ADDRESS="0x9457A" TYPE="end-of-line">cb </COMMENT>
+        <COMMENT ADDRESS="0x9457F" TYPE="end-of-line">cg </COMMENT>
+        <COMMENT ADDRESS="0x94589" TYPE="end-of-line">cr </COMMENT>
+        <COMMENT ADDRESS="0x9458A" TYPE="end-of-line">out </COMMENT>
+        <COMMENT ADDRESS="0x94591" TYPE="end-of-line">inp </COMMENT>
+        <COMMENT ADDRESS="0x945D3" TYPE="end-of-line">ib </COMMENT>
+        <COMMENT ADDRESS="0x945D4" TYPE="end-of-line">ig </COMMENT>
+        <COMMENT ADDRESS="0x945D5" TYPE="end-of-line">ir </COMMENT>
+        <COMMENT ADDRESS="0x945D6" TYPE="end-of-line">cb </COMMENT>
+        <COMMENT ADDRESS="0x945D7" TYPE="end-of-line">cg </COMMENT>
+        <COMMENT ADDRESS="0x945D8" TYPE="end-of-line">cr </COMMENT>
+        <COMMENT ADDRESS="0x945D9" TYPE="end-of-line">out </COMMENT>
+        <COMMENT ADDRESS="0x945E0" TYPE="end-of-line">inp </COMMENT>
         <COMMENT ADDRESS="0x945F6" TYPE="end-of-line">len </COMMENT>
         <COMMENT ADDRESS="0x945FB" TYPE="end-of-line">buf </COMMENT>
+        <COMMENT ADDRESS="0x94637" TYPE="end-of-line">ib </COMMENT>
+        <COMMENT ADDRESS="0x94639" TYPE="end-of-line">ig </COMMENT>
+        <COMMENT ADDRESS="0x9463B" TYPE="end-of-line">ir </COMMENT>
+        <COMMENT ADDRESS="0x9463D" TYPE="end-of-line">cb </COMMENT>
+        <COMMENT ADDRESS="0x9463F" TYPE="end-of-line">cg </COMMENT>
+        <COMMENT ADDRESS="0x94641" TYPE="end-of-line">cr </COMMENT>
+        <COMMENT ADDRESS="0x94643" TYPE="end-of-line">out </COMMENT>
+        <COMMENT ADDRESS="0x9464D" TYPE="end-of-line">inp </COMMENT>
+        <COMMENT ADDRESS="0x94656" TYPE="end-of-line">ib </COMMENT>
+        <COMMENT ADDRESS="0x9465B" TYPE="end-of-line">ig </COMMENT>
+        <COMMENT ADDRESS="0x94660" TYPE="end-of-line">ir </COMMENT>
+        <COMMENT ADDRESS="0x94665" TYPE="end-of-line">cb </COMMENT>
+        <COMMENT ADDRESS="0x94667" TYPE="end-of-line">cg </COMMENT>
+        <COMMENT ADDRESS="0x94669" TYPE="end-of-line">cr </COMMENT>
+        <COMMENT ADDRESS="0x9466B" TYPE="end-of-line">out </COMMENT>
+        <COMMENT ADDRESS="0x94676" TYPE="end-of-line">inp </COMMENT>
         <COMMENT ADDRESS="0x94677" TYPE="end-of-line">len </COMMENT>
         <COMMENT ADDRESS="0x94684" TYPE="end-of-line">buf </COMMENT>
+        <COMMENT ADDRESS="0x946AC" TYPE="end-of-line">ib </COMMENT>
+        <COMMENT ADDRESS="0x946AE" TYPE="end-of-line">ig </COMMENT>
+        <COMMENT ADDRESS="0x946B0" TYPE="end-of-line">ir </COMMENT>
+        <COMMENT ADDRESS="0x946B2" TYPE="end-of-line">cb </COMMENT>
+        <COMMENT ADDRESS="0x946B4" TYPE="end-of-line">cg </COMMENT>
+        <COMMENT ADDRESS="0x946B6" TYPE="end-of-line">cr </COMMENT>
+        <COMMENT ADDRESS="0x946B8" TYPE="end-of-line">out </COMMENT>
+        <COMMENT ADDRESS="0x946C3" TYPE="end-of-line">inp </COMMENT>
+        <COMMENT ADDRESS="0x946CC" TYPE="end-of-line">ib </COMMENT>
+        <COMMENT ADDRESS="0x946D1" TYPE="end-of-line">ig </COMMENT>
+        <COMMENT ADDRESS="0x946D6" TYPE="end-of-line">ir </COMMENT>
+        <COMMENT ADDRESS="0x946DB" TYPE="end-of-line">cb </COMMENT>
+        <COMMENT ADDRESS="0x946DD" TYPE="end-of-line">cg </COMMENT>
+        <COMMENT ADDRESS="0x946DF" TYPE="end-of-line">cr </COMMENT>
+        <COMMENT ADDRESS="0x946E1" TYPE="end-of-line">out </COMMENT>
+        <COMMENT ADDRESS="0x946EC" TYPE="end-of-line">inp </COMMENT>
+        <COMMENT ADDRESS="0x94828" TYPE="end-of-line">ib </COMMENT>
+        <COMMENT ADDRESS="0x94829" TYPE="end-of-line">ig </COMMENT>
+        <COMMENT ADDRESS="0x94830" TYPE="end-of-line">ir </COMMENT>
+        <COMMENT ADDRESS="0x94844" TYPE="end-of-line">cb </COMMENT>
+        <COMMENT ADDRESS="0x9484B" TYPE="end-of-line">cg </COMMENT>
+        <COMMENT ADDRESS="0x94854" TYPE="end-of-line">cr </COMMENT>
+        <COMMENT ADDRESS="0x94859" TYPE="end-of-line">out </COMMENT>
+        <COMMENT ADDRESS="0x9485A" TYPE="end-of-line">inp </COMMENT>
         <COMMENT ADDRESS="0x948BF" TYPE="end-of-line">len </COMMENT>
         <COMMENT ADDRESS="0x948C4" TYPE="end-of-line">buf </COMMENT>
         <COMMENT ADDRESS="0x94904" TYPE="end-of-line">audOpts </COMMENT>
@@ -13888,9 +13882,65 @@ jumptable 000267F1 default case, cases 3,4 </COMMENT>
         <COMMENT ADDRESS="0x94D82" TYPE="repeatable">jumptable 00094D56 case 3 </COMMENT>
         <COMMENT ADDRESS="0x94D8E" TYPE="repeatable">jumptable 00094D56 case 4 </COMMENT>
         <COMMENT ADDRESS="0x94D98" TYPE="repeatable">jumptable 00094D56 default case </COMMENT>
+        <COMMENT ADDRESS="0x95003" TYPE="end-of-line">ib </COMMENT>
+        <COMMENT ADDRESS="0x95004" TYPE="end-of-line">ig </COMMENT>
+        <COMMENT ADDRESS="0x95005" TYPE="end-of-line">ir </COMMENT>
+        <COMMENT ADDRESS="0x9500B" TYPE="end-of-line">cb </COMMENT>
+        <COMMENT ADDRESS="0x95011" TYPE="end-of-line">cg </COMMENT>
+        <COMMENT ADDRESS="0x95017" TYPE="end-of-line">cr </COMMENT>
+        <COMMENT ADDRESS="0x95018" TYPE="end-of-line">out </COMMENT>
+        <COMMENT ADDRESS="0x9501F" TYPE="end-of-line">inp </COMMENT>
+        <COMMENT ADDRESS="0x95063" TYPE="end-of-line">ib </COMMENT>
+        <COMMENT ADDRESS="0x95064" TYPE="end-of-line">ig </COMMENT>
+        <COMMENT ADDRESS="0x95065" TYPE="end-of-line">ir </COMMENT>
+        <COMMENT ADDRESS="0x95066" TYPE="end-of-line">cb </COMMENT>
+        <COMMENT ADDRESS="0x95067" TYPE="end-of-line">cg </COMMENT>
+        <COMMENT ADDRESS="0x95068" TYPE="end-of-line">cr </COMMENT>
+        <COMMENT ADDRESS="0x95069" TYPE="end-of-line">out </COMMENT>
+        <COMMENT ADDRESS="0x9506F" TYPE="end-of-line">inp </COMMENT>
         <COMMENT ADDRESS="0x95085" TYPE="end-of-line">len </COMMENT>
         <COMMENT ADDRESS="0x9508A" TYPE="end-of-line">buf </COMMENT>
+        <COMMENT ADDRESS="0x950C6" TYPE="end-of-line">ib </COMMENT>
+        <COMMENT ADDRESS="0x950C8" TYPE="end-of-line">ig </COMMENT>
+        <COMMENT ADDRESS="0x950CA" TYPE="end-of-line">ir </COMMENT>
+        <COMMENT ADDRESS="0x950CC" TYPE="end-of-line">cb </COMMENT>
+        <COMMENT ADDRESS="0x950CE" TYPE="end-of-line">cg </COMMENT>
+        <COMMENT ADDRESS="0x950D0" TYPE="end-of-line">cr </COMMENT>
+        <COMMENT ADDRESS="0x950D2" TYPE="end-of-line">out </COMMENT>
+        <COMMENT ADDRESS="0x950DD" TYPE="end-of-line">inp </COMMENT>
+        <COMMENT ADDRESS="0x950E6" TYPE="end-of-line">ib </COMMENT>
+        <COMMENT ADDRESS="0x950EB" TYPE="end-of-line">ig </COMMENT>
+        <COMMENT ADDRESS="0x950F0" TYPE="end-of-line">ir </COMMENT>
+        <COMMENT ADDRESS="0x950F5" TYPE="end-of-line">cb </COMMENT>
+        <COMMENT ADDRESS="0x950F7" TYPE="end-of-line">cg </COMMENT>
+        <COMMENT ADDRESS="0x950F9" TYPE="end-of-line">cr </COMMENT>
+        <COMMENT ADDRESS="0x950FB" TYPE="end-of-line">out </COMMENT>
+        <COMMENT ADDRESS="0x95106" TYPE="end-of-line">inp </COMMENT>
         <COMMENT ADDRESS="0x95114" TYPE="end-of-line">len </COMMENT>
+        <COMMENT ADDRESS="0x9513C" TYPE="end-of-line">ib </COMMENT>
+        <COMMENT ADDRESS="0x9513E" TYPE="end-of-line">ig </COMMENT>
+        <COMMENT ADDRESS="0x95140" TYPE="end-of-line">ir </COMMENT>
+        <COMMENT ADDRESS="0x95142" TYPE="end-of-line">cb </COMMENT>
+        <COMMENT ADDRESS="0x95144" TYPE="end-of-line">cg </COMMENT>
+        <COMMENT ADDRESS="0x95146" TYPE="end-of-line">cr </COMMENT>
+        <COMMENT ADDRESS="0x95148" TYPE="end-of-line">out </COMMENT>
+        <COMMENT ADDRESS="0x95153" TYPE="end-of-line">inp </COMMENT>
+        <COMMENT ADDRESS="0x9515C" TYPE="end-of-line">ib </COMMENT>
+        <COMMENT ADDRESS="0x95161" TYPE="end-of-line">ig </COMMENT>
+        <COMMENT ADDRESS="0x95166" TYPE="end-of-line">ir </COMMENT>
+        <COMMENT ADDRESS="0x9516B" TYPE="end-of-line">cb </COMMENT>
+        <COMMENT ADDRESS="0x9516D" TYPE="end-of-line">cg </COMMENT>
+        <COMMENT ADDRESS="0x9516F" TYPE="end-of-line">cr </COMMENT>
+        <COMMENT ADDRESS="0x95171" TYPE="end-of-line">out </COMMENT>
+        <COMMENT ADDRESS="0x9517C" TYPE="end-of-line">inp </COMMENT>
+        <COMMENT ADDRESS="0x95294" TYPE="end-of-line">ib </COMMENT>
+        <COMMENT ADDRESS="0x95298" TYPE="end-of-line">ig </COMMENT>
+        <COMMENT ADDRESS="0x9529F" TYPE="end-of-line">ir </COMMENT>
+        <COMMENT ADDRESS="0x952B3" TYPE="end-of-line">cb </COMMENT>
+        <COMMENT ADDRESS="0x952BA" TYPE="end-of-line">cg </COMMENT>
+        <COMMENT ADDRESS="0x952C3" TYPE="end-of-line">cr </COMMENT>
+        <COMMENT ADDRESS="0x952CA" TYPE="end-of-line">out </COMMENT>
+        <COMMENT ADDRESS="0x952CB" TYPE="end-of-line">inp </COMMENT>
         <COMMENT ADDRESS="0x9532A" TYPE="end-of-line">len </COMMENT>
         <COMMENT ADDRESS="0x9532F" TYPE="end-of-line">buf </COMMENT>
         <COMMENT ADDRESS="0x95F78" TYPE="end-of-line">b </COMMENT>
@@ -14186,6 +14236,8 @@ CX=number of words to copy from protected mode to real mode stack
 ES:DI / ES:EDI = selector:offset of real mode call structure
 Return: CF set on error
 CF clear if ok </COMMENT>
+        <COMMENT ADDRESS="0xBC7BD" TYPE="repeatable">W?seekoff$:streambuf$n(lii)l
+doubtful name </COMMENT>
         <COMMENT ADDRESS="0xBDE4E" TYPE="end-of-line">a2 </COMMENT>
         <COMMENT ADDRESS="0xBDE52" TYPE="end-of-line">a1 </COMMENT>
         <COMMENT ADDRESS="0xC1D1B" TYPE="end-of-line">DOS - GET CURRENT DATE
@@ -14994,6 +15046,7 @@ DS:DX = new vector to be used for specified interrupt </COMMENT>
         <COMMENT ADDRESS="0xE1331" TYPE="end-of-line">_TBYTE </COMMENT>
         <COMMENT ADDRESS="0xE1340" TYPE="end-of-line">_TBYTE </COMMENT>
         <COMMENT ADDRESS="0xE1344" TYPE="end-of-line">_TBYTE </COMMENT>
+        <COMMENT ADDRESS="0xE1702" TYPE="end-of-line">struct exception * </COMMENT>
         <COMMENT ADDRESS="0xE1B20" TYPE="end-of-line">switch 27 cases </COMMENT>
         <COMMENT ADDRESS="0xE1B27" TYPE="end-of-line">jump table for switch statement </COMMENT>
         <COMMENT ADDRESS="0xE1B93" TYPE="repeatable">jumptable 000E1B20 cases 5,6,20,21,24-26 </COMMENT>
@@ -15817,6 +15870,7 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0x14BF0" NAME="Config::GetConfigs(void)" MANGLED="W?GetConfigs$:Config$n()uc" />
         <SYMBOL ADDRESS="0x156E0" NAME="jpt_159CF" />
         <SYMBOL ADDRESS="0x159BC" NAME="def_159CF" />
+        <SYMBOL ADDRESS="0x1C560" NAME="ZeroVRAM(void)" MANGLED="W?ZeroVRAM$n()v" />
         <SYMBOL ADDRESS="0x21354" NAME="jpt_21AEB" />
         <SYMBOL ADDRESS="0x21D0B" NAME="def_21AEB" />
         <SYMBOL ADDRESS="0x24514" NAME="jpt_2473D" />
@@ -15902,6 +15956,7 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0x56FE0" NAME="Plant::InitArray(void)" MANGLED="W?InitArray$:Plant$n()v" />
         <SYMBOL ADDRESS="0x57900" NAME="jpt_57A0C" />
         <SYMBOL ADDRESS="0x5792F" NAME="def_57A0C" />
+        <SYMBOL ADDRESS="0x5B880" NAME="ResetAllInputs(void)" MANGLED="W?ResetAllInputs$n()v" />
         <SYMBOL ADDRESS="0x5B8C0" NAME="IFCBase::SetupColorLookups(void)" MANGLED="W?SetupColorLookups$:IFCBase$n()v" />
         <SYMBOL ADDRESS="0x61AD0" NAME="HelpDraw::GenericHelpDraw(MyGadget_*,char_*)" MANGLED="W?GenericHelpDraw$:HelpDraw$n(pn$MyGadget$$pna)v" />
         <SYMBOL ADDRESS="0x64378" NAME="jpt_643B6" />
@@ -15929,6 +15984,7 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0x73912" NAME="def_72EEA" />
         <SYMBOL ADDRESS="0x751DC" NAME="jpt_7520F" />
         <SYMBOL ADDRESS="0x753C2" NAME="def_7520F" />
+        <SYMBOL ADDRESS="0x756C0" NAME="Player::SetPlayerPointer(void)" MANGLED="W?SetPlayerPointer$:Player$n()v" />
         <SYMBOL ADDRESS="0x75734" NAME="jpt_7583A" />
         <SYMBOL ADDRESS="0x7581E" NAME="def_7583A" />
         <SYMBOL ADDRESS="0x75DB0" NAME="nullsub_2" />
@@ -15967,7 +16023,15 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0x8A2A0" NAME="jpt_8A28B" />
         <SYMBOL ADDRESS="0x8A720" NAME="nullsub_14" />
         <SYMBOL ADDRESS="0x91E00" NAME="LbMemoryAlloc_" />
+        <SYMBOL ADDRESS="0x91E90" NAME="LbMemoryAllocLow_" />
+        <SYMBOL ADDRESS="0x91F20" NAME="LbMemoryCheck_" />
         <SYMBOL ADDRESS="0x92030" NAME="LbMemoryFree_" />
+        <SYMBOL ADDRESS="0x920A0" NAME="LbMemoryGrow_" />
+        <SYMBOL ADDRESS="0x92170" NAME="LbMemoryReset_" />
+        <SYMBOL ADDRESS="0x921F0" NAME="LbMemorySetup_" />
+        <SYMBOL ADDRESS="0x92710" NAME="game(void)" MANGLED="W?game$n()v" />
+        <SYMBOL ADDRESS="0x92930" NAME="PlayIntro(void)" MANGLED="W?PlayIntro$n()v" />
+        <SYMBOL ADDRESS="0x929D0" NAME="PlaySmacker(char_*,char,char)" MANGLED="W?PlaySmacker$n(pnaucuc)v" />
         <SYMBOL ADDRESS="0x92F7C" NAME="jpt_9358B" />
         <SYMBOL ADDRESS="0x9315C" NAME="def_9358B" />
         <SYMBOL ADDRESS="0x93BB0" NAME="SoundProgressLog_" />
@@ -15980,6 +16044,7 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0x94AA4" NAME="jpt_94D56" />
         <SYMBOL ADDRESS="0x94AC0" NAME="setup_game(void)" MANGLED="W?setup_game$n()v" />
         <SYMBOL ADDRESS="0x94D98" NAME="def_94D56" />
+        <SYMBOL ADDRESS="0x954A0" NAME="reset_game(void)" MANGLED="W?reset_game$n()v" />
         <SYMBOL ADDRESS="0x95C40" NAME="_get_osfhandle__0" />
         <SYMBOL ADDRESS="0x95C50" NAME="_os_handle__0" />
         <SYMBOL ADDRESS="0x95CC0" NAME="nullsub_15" />
@@ -16042,6 +16107,7 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0x98FB0" NAME="DrawMySpriteHR(short,short,TbSprite_*)" MANGLED="W?DrawMySpriteHR$n(sspn$TbSprite$$)v" />
         <SYMBOL ADDRESS="0x99A20" NAME="DrawMyRemapSpriteHR(short,short,TbSprite_*,char_*)" MANGLED="W?DrawMyRemapSpriteHR$n(sspn$TbSprite$$pnuc)v" />
         <SYMBOL ADDRESS="0x9A590" NAME="DrawMyDitherRemapSpriteHR(short,short,TbSprite_*,char_*,char_*)" MANGLED="W?DrawMyDitherRemapSpriteHR$n(sspn$TbSprite$$pnucpnuc)v" />
+        <SYMBOL ADDRESS="0x9FC90" NAME="StopMusic_" />
         <SYMBOL ADDRESS="0x9FD40" NAME="LbScreenSetupAnyMode_" />
         <SYMBOL ADDRESS="0x9FEB0" NAME="LbScreenClearGraphicsWindow_" />
         <SYMBOL ADDRESS="0x9FEEC" NAME="LbScreenClear_" />
@@ -16069,9 +16135,12 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0xA1690" NAME="StopAllSampleFadeTimers_" />
         <SYMBOL ADDRESS="0xA16F0" NAME="LbMousePlace_" />
         <SYMBOL ADDRESS="0xA1824" NAME="LbMouseRemove_" />
+        <SYMBOL ADDRESS="0xA1908" NAME="LbMouseChangeSprite_" />
+        <SYMBOL ADDRESS="0xA1AB4" NAME="LbMouseSetup_" />
         <SYMBOL ADDRESS="0xA1C74" NAME="LbMouseReset_" />
         <SYMBOL ADDRESS="0xA1CF8" NAME="LbMouseSuspend_" />
         <SYMBOL ADDRESS="0xA258C" NAME="screen_remove(ulong)" MANGLED="W?screen_remove$n(ul)l" />
+        <SYMBOL ADDRESS="0xA26F0" NAME="LbPaletteFade_" />
         <SYMBOL ADDRESS="0xA28A4" NAME="LbPaletteFindColour_" />
         <SYMBOL ADDRESS="0xA2CCC" NAME="LbPaletteDraw_" />
         <SYMBOL ADDRESS="0xA2DD0" NAME="StopAllSamples_" />
@@ -16081,6 +16150,7 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0xA38BE" NAME="__CHP" />
         <SYMBOL ADDRESS="0xA38DC" NAME="j___sys_init_387_emulator" />
         <SYMBOL ADDRESS="0xA38E1" NAME="j___sys_fini_387_emulator" />
+        <SYMBOL ADDRESS="0xA3A5C" NAME="LbVesaSetPage_" />
         <SYMBOL ADDRESS="0xA3AD0" NAME="LbVesaGetInfo_" />
         <SYMBOL ADDRESS="0xA4DDA" NAME="j___clock_" />
         <SYMBOL ADDRESS="0xA4DE0" NAME="memmove_" />
@@ -16092,6 +16162,7 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0xAB074" NAME="unknown_libname_1" />
         <SYMBOL ADDRESS="0xAB091" NAME="unknown_libname_2" />
         <SYMBOL ADDRESS="0xAB0AD" NAME="unknown_libname_3" />
+        <SYMBOL ADDRESS="0xAB0F6" NAME="atol_" />
         <SYMBOL ADDRESS="0xAB6A8" NAME="LbNetworkReset_" />
         <SYMBOL ADDRESS="0xAB708" NAME="LbNetworkSessionActive_" />
         <SYMBOL ADDRESS="0xAB750" NAME="LbNetworkShutDownListeners_" />
@@ -16216,6 +16287,9 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0xB2240" NAME="_AIL_set_sample_volume" />
         <SYMBOL ADDRESS="0xB23F0" NAME="_AIL_sample_status" />
         <SYMBOL ADDRESS="0xB2940" NAME="_AIL_set_digital_master_volume" />
+        <SYMBOL ADDRESS="0xB3DA0" NAME="_AIL_stop_sequence" />
+        <SYMBOL ADDRESS="0xB3EA0" NAME="_AIL_end_sequence" />
+        <SYMBOL ADDRESS="0xB40F0" NAME="_AIL_sequence_status" />
         <SYMBOL ADDRESS="0xB60E0" NAME="_AIL_destroy_wave_synthesizer" />
         <SYMBOL ADDRESS="0xB6160" NAME="AILDEBUG_end_" />
         <SYMBOL ADDRESS="0xB618C" NAME="LbDrawHVLine_" />
@@ -16283,7 +16357,13 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0xBBB43" NAME="int386x_" />
         <SYMBOL ADDRESS="0xBBE29" NAME="__setEFGfmt_" />
         <SYMBOL ADDRESS="0xBBE44" NAME="__sys_init_387_emulator" />
+        <SYMBOL ADDRESS="0xBBE74" NAME="hook_in_emulator" />
+        <SYMBOL ADDRESS="0xBBF3F" NAME="create_IDT_entry" />
+        <SYMBOL ADDRESS="0xBBF5C" NAME="hook_pharlap" />
+        <SYMBOL ADDRESS="0xBBFA9" NAME="_set_EM_MP_bits" />
         <SYMBOL ADDRESS="0xBBFC9" NAME="__sys_fini_387_emulator" />
+        <SYMBOL ADDRESS="0xBC043" NAME="unhook_pharlap" />
+        <SYMBOL ADDRESS="0xBC07E" NAME="_reset_EM_MP_bits" />
         <SYMBOL ADDRESS="0xBC09F" NAME="__save_8087_" />
         <SYMBOL ADDRESS="0xBC0A4" NAME="__rest_8087_" />
         <SYMBOL ADDRESS="0xBC0A8" NAME="__init_8087_" />
@@ -16316,6 +16396,9 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0xBC65D" NAME="__checkIsDBCS_" />
         <SYMBOL ADDRESS="0xBC68B" NAME="dos_get_dbcs_lead_table_" />
         <SYMBOL ADDRESS="0xBCB0A" NAME="__doserror_" />
+        <SYMBOL ADDRESS="0xBCB20" NAME="CallIPX_" />
+        <SYMBOL ADDRESS="0xBCB98" NAME="CallRealModeInterrupt_" />
+        <SYMBOL ADDRESS="0xBCBEC" NAME="setup_bullfrog_header_" />
         <SYMBOL ADDRESS="0xBCC44" NAME="ipx_create_session_" />
         <SYMBOL ADDRESS="0xBD888" NAME="ipx_add_new_player_" />
         <SYMBOL ADDRESS="0xBDCAC" NAME="ipx_exchange_packets_" />
@@ -16418,8 +16501,21 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0xC62F0" NAME="SMACKOPEN" />
         <SYMBOL ADDRESS="0xC7810" NAME="unknown_libname_11" />
         <SYMBOL ADDRESS="0xC7820" NAME="unknown_libname_12" />
+        <SYMBOL ADDRESS="0xC7830" NAME="_MEM_alloc_lock" />
+        <SYMBOL ADDRESS="0xC7860" NAME="_MEM_free_lock" />
+        <SYMBOL ADDRESS="0xC7890" NAME="_MEM_alloc_DOS" />
+        <SYMBOL ADDRESS="0xC78E0" NAME="_MEM_free_DOS" />
+        <SYMBOL ADDRESS="0xC78F0" NAME="_VMM_lock_range" />
         <SYMBOL ADDRESS="0xC7960" NAME="_VMM_unlock_range" />
         <SYMBOL ADDRESS="0xC79D0" NAME="_VMM_lock" />
+        <SYMBOL ADDRESS="0xC79F0" NAME="_VMM_unlock" />
+        <SYMBOL ADDRESS="0xC7A10" NAME="_DLL_size" />
+        <SYMBOL ADDRESS="0xC7B50" NAME="_DLL_load" />
+        <SYMBOL ADDRESS="0xC80C0" NAME="_FILE_error" />
+        <SYMBOL ADDRESS="0xC80D0" NAME="_FILE_size" />
+        <SYMBOL ADDRESS="0xC8120" NAME="_FILE_read" />
+        <SYMBOL ADDRESS="0xC81F0" NAME="_FILE_write" />
+        <SYMBOL ADDRESS="0xC8280" NAME="_FILE_append" />
         <SYMBOL ADDRESS="0xC8304" NAME="getenv_" />
         <SYMBOL ADDRESS="0xC8365" NAME="cget_string_" />
         <SYMBOL ADDRESS="0xC838E" NAME="uncget_string_" />
@@ -16689,10 +16785,15 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0xE1570" NAME="_nmsize_" />
         <SYMBOL ADDRESS="0xE1579" NAME="__math1err_" />
         <SYMBOL ADDRESS="0xE1583" NAME="__math2err_" />
+        <SYMBOL ADDRESS="0xE165E" NAME="verify_pentium_fdiv_bug_" />
         <SYMBOL ADDRESS="0xE16B3" NAME="_set_matherr_" />
         <SYMBOL ADDRESS="0xE16B9" NAME="__rterrmsg_" />
         <SYMBOL ADDRESS="0xE1701" NAME="_matherr_" />
+        <SYMBOL ADDRESS="0xE1730" NAME="__matherr" />
         <SYMBOL ADDRESS="0xE1735" NAME="__get_std_stream_" />
+        <SYMBOL ADDRESS="0xE1754" NAME="matherr__" />
+        <SYMBOL ADDRESS="0xE1760" NAME="prop_text" />
+        <SYMBOL ADDRESS="0xE1906" NAME="make_fade_table_" />
         <SYMBOL ADDRESS="0xE1B27" NAME="jpt_E1B20" />
         <SYMBOL ADDRESS="0xE2434" NAME="jpt_E242D" />
         <SYMBOL ADDRESS="0xE2D62" NAME="jpt_E2D5B" />
@@ -16713,6 +16814,25 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0xEAE90" NAME="_SmackGetSizeTables" />
         <SYMBOL ADDRESS="0xEAE96" NAME="j_SmackDoTables" />
         <SYMBOL ADDRESS="0xEAEA0" NAME="_SmackDoTables" />
+        <SYMBOL ADDRESS="0xEB111" NAME="j_SmackInternal007_sub1" />
+        <SYMBOL ADDRESS="0xEB120" NAME="_SmackInternal007_sub1" />
+        <SYMBOL ADDRESS="0xEB1D1" NAME="j_SmackInternal005" />
+        <SYMBOL ADDRESS="0xEB1E0" NAME="_SmackInternal005" />
+        <SYMBOL ADDRESS="0xEB210" NAME="_SmackInternal006" />
+        <SYMBOL ADDRESS="0xEB240" NAME="_SmackInternal007" />
+        <SYMBOL ADDRESS="0xEBF56" NAME="j_SmackInternalSwitch1_case000" />
+        <SYMBOL ADDRESS="0xEBF60" NAME="_SmackInternalSwitch1_case000" />
+        <SYMBOL ADDRESS="0xEBF6C" NAME="_SmackInternalSwitch1_case001" />
+        <SYMBOL ADDRESS="0xEBF78" NAME="_SmackInternalSwitch1_case002" />
+        <SYMBOL ADDRESS="0xECCB4" NAME="_SmackInternalSwitch1_case251" />
+        <SYMBOL ADDRESS="0xECCC0" NAME="_SmackInternalSwitch1_case252" />
+        <SYMBOL ADDRESS="0xECCCC" NAME="_SmackInternalSwitch1_case253" />
+        <SYMBOL ADDRESS="0xECCD8" NAME="_SmackInternalSwitch1_case254" />
+        <SYMBOL ADDRESS="0xECCE4" NAME="_SmackInternalSwitch1_case255" />
+        <SYMBOL ADDRESS="0xECCF0" NAME="_SmackInternal010" />
+        <SYMBOL ADDRESS="0xED030" NAME="_SmackInternal011" />
+        <SYMBOL ADDRESS="0xED840" NAME="_SmackInternal012" />
+        <SYMBOL ADDRESS="0xED990" NAME="_SmackInternal013" />
         <SYMBOL ADDRESS="0xEDB16" NAME="j_Unsmack" />
         <SYMBOL ADDRESS="0xEDB20" NAME="_Unsmack" />
         <SYMBOL ADDRESS="0xEDEE7" NAME="j_SmackDoPCM" />
@@ -16779,6 +16899,8 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0x10AA2A" NAME="a1234567890Qwer" />
         <SYMBOL ADDRESS="0x10AA46" NAME="aAsdfghjkl" />
         <SYMBOL ADDRESS="0x10AA53" NAME="aZxcvbnm" />
+        <SYMBOL ADDRESS="0x10AB2C" NAME="__8087" />
+        <SYMBOL ADDRESS="0x10AB2D" NAME="__real87" />
         <SYMBOL ADDRESS="0x10ABA8" NAME="long_MyGHelpDelay" MANGLED="W?MyGHelpDelay$nl" />
         <SYMBOL ADDRESS="0x10ABB0" NAME="NetTimeoutTicks" />
         <SYMBOL ADDRESS="0x10AC14" NAME="ComHandlerInfo_com_dev[]" MANGLED="W?com_dev$n[]$ComHandlerInfo$$" />
@@ -16795,12 +16917,35 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0x10B4E8" NAME="_SoundAble" />
         <SYMBOL ADDRESS="0x10B4EA" NAME="_SoundActive" />
         <SYMBOL ADDRESS="0x10B4F0" NAME="_CurrentSoundMasterVolume" />
+        <SYMBOL ADDRESS="0x10B4F8" NAME="__GDAptr" />
+        <SYMBOL ADDRESS="0x10B4FC" NAME="__D16Infoseg" />
+        <SYMBOL ADDRESS="0x10B4FE" NAME="__x386_zero_base_selector" />
         <SYMBOL ADDRESS="0x10B510" NAME="_locked" />
+        <SYMBOL ADDRESS="0x10B518" NAME="_MusicAble" />
+        <SYMBOL ADDRESS="0x10B519" NAME="_MusicActive" />
+        <SYMBOL ADDRESS="0x10B51A" NAME="_CurrentDangerMusicFadeDirection" />
+        <SYMBOL ADDRESS="0x10B51B" NAME="_DangerMusicVolumeChange" />
+        <SYMBOL ADDRESS="0x10B756" NAME="hook_in_emu__L_S4" />
+        <SYMBOL ADDRESS="0x10B758" NAME="hook_in_emu__L_S5" />
+        <SYMBOL ADDRESS="0x10B78E" NAME="__Extender" />
+        <SYMBOL ADDRESS="0x10B790" NAME="__X32VM" />
+        <SYMBOL ADDRESS="0x10B99C" NAME="_disk_err" />
+        <SYMBOL ADDRESS="0x10B9A0" NAME="_MEM_alloc" />
         <SYMBOL ADDRESS="0x10C660" NAME="aSample" />
         <SYMBOL ADDRESS="0x10C6E8" NAME="aTimb_0" />
         <SYMBOL ADDRESS="0x10C700" NAME="aBullfrog" />
         <SYMBOL ADDRESS="0x10C752" NAME="aStackOverflow" />
         <SYMBOL ADDRESS="0x10CB00" NAME="funcs_EB445" />
+        <SYMBOL ADDRESS="0x10CF6C" NAME="___end_dst" />
+        <SYMBOL ADDRESS="0x10CF90" NAME="_timezone" />
+        <SYMBOL ADDRESS="0x10CF94" NAME="___dst_adjust" />
+        <SYMBOL ADDRESS="0x10CF98" NAME="_daylight" />
+        <SYMBOL ADDRESS="0x10CF9C" NAME="_stzone" />
+        <SYMBOL ADDRESS="0x10CFBB" NAME="_dtzone" />
+        <SYMBOL ADDRESS="0x10CFDA" NAME="_tzname" />
+        <SYMBOL ADDRESS="0x10CFE2" NAME="_tzFlag" />
+        <SYMBOL ADDRESS="0x10D47C" NAME="_MathFuncNames" />
+        <SYMBOL ADDRESS="0x10D4D8" NAME="__RWD_matherr" />
         <SYMBOL ADDRESS="0x10D4DC" NAME="aSpeechMisc14Wa" />
         <SYMBOL ADDRESS="0x10D4EE" NAME="aSS" />
         <SYMBOL ADDRESS="0x10D4F3" NAME="aSpeechMisc07Wa" />
@@ -17688,10 +17833,14 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0x11247C" NAME="_IsTable" />
         <SYMBOL ADDRESS="0x1125DF" NAME="aNeduit" />
         <SYMBOL ADDRESS="0x112760" NAME="jpt_E0E7E" />
-        <SYMBOL ADDRESS="0x114CA8" NAME="name" />
+        <SYMBOL ADDRESS="0x114C9C" NAME="inp" />
+        <SYMBOL ADDRESS="0x114CA8" NAME="a1" />
         <SYMBOL ADDRESS="0x1157FC" NAME="a2" />
+        <SYMBOL ADDRESS="0x11581C" NAME="out" />
+        <SYMBOL ADDRESS="0x117431" NAME="char_localPlayer" MANGLED="W?localPlayer$nuc" />
         <SYMBOL ADDRESS="0x117464" NAME="W?control$n$GameControl$$__Flags___bf0" />
-        <SYMBOL ADDRESS="0x117661" NAME="RunTimeGameFlags_runFlags" MANGLED="W?runFlags$n$RunTimeGameFlags$$" />
+        <SYMBOL ADDRESS="0x117660" NAME="RunTimeGameFlags_runFlags" MANGLED="W?runFlags$n$RunTimeGameFlags$$_0" />
+        <SYMBOL ADDRESS="0x117A3C" NAME="bio__players" />
         <SYMBOL ADDRESS="0x119670" NAME="unkn_buf_119670" />
         <SYMBOL ADDRESS="0x152F86" NAME="W?bio$n$BioGame$$__creatures" />
         <SYMBOL ADDRESS="0x15C0D6" NAME="W?bio$n$BioGame$$__plants" />
@@ -17712,6 +17861,8 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0x1847B6" NAME="W?tiredMMs$_Creature$n$MyMinSprite$$__delta" />
         <SYMBOL ADDRESS="0x1847BE" NAME="W?scaredMMs$_Creature$n$MyMinSprite$$__delta" />
         <SYMBOL ADDRESS="0x1847C6" NAME="W?huntingMMs$_Creature$n$MyMinSprite$$__delta" />
+        <SYMBOL ADDRESS="0x186C2C" NAME="_lbMemoryAvailable" />
+        <SYMBOL ADDRESS="0x186C48" NAME="W?memory_blocks$n__$mem_block$$__memblk_2" />
         <SYMBOL ADDRESS="0x188A54" NAME="_fade_table" />
         <SYMBOL ADDRESS="0x18CA54" NAME="_ghost_table" />
         <SYMBOL ADDRESS="0x19CA58" NAME="_lbDisplay" />
@@ -17729,7 +17880,12 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0x19CABA" NAME="lbDisplay__OldVideoMode" />
         <SYMBOL ADDRESS="0x19CABC" NAME="lbDisplay__ScreenMode" />
         <SYMBOL ADDRESS="0x19CABE" NAME="lbDisplay__VesaIsSetUp" />
+        <SYMBOL ADDRESS="0x19CABF" NAME="lbDisplay__LeftButton" />
+        <SYMBOL ADDRESS="0x19CAC0" NAME="lbDisplay__RightButton" />
+        <SYMBOL ADDRESS="0x19CAC1" NAME="lbDisplay__MiddleButton" />
         <SYMBOL ADDRESS="0x19CAC2" NAME="lbDisplay__MLeftButton" />
+        <SYMBOL ADDRESS="0x19CAC3" NAME="lbDisplay__MRightButton" />
+        <SYMBOL ADDRESS="0x19CAC4" NAME="lbDisplay__MMiddleButton" />
         <SYMBOL ADDRESS="0x19CAF0" NAME="_lbKeyOn" />
         <SYMBOL ADDRESS="0x19CBF0" NAME="_lbInkey" />
         <SYMBOL ADDRESS="0x19CD24" NAME="ulong_LbScreenSetDoubleBuffering(ulong)::.0::cur_flag" MANGLED="W?cur_flag$:.0$:?LbScreenSetDoubleBuffering$n(ul)ulnul" />
@@ -17789,6 +17945,13 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0x1A0A88" NAME="_vsecs" />
         <SYMBOL ADDRESS="0x1A0A8C" NAME="_vmins" />
         <SYMBOL ADDRESS="0x1A0A90" NAME="_vcentisecs" />
+        <SYMBOL ADDRESS="0x1A0AB9" NAME="_MusicInstalled" />
+        <SYMBOL ADDRESS="0x1A0AC4" NAME="_SongCurrentlyPlaying" />
+        <SYMBOL ADDRESS="0x1A0AD8" NAME="_SongHandle" />
+        <SYMBOL ADDRESS="0x1A0ADC" NAME="_DangerMusicFadeHandle" />
+        <SYMBOL ADDRESS="0x1A0AE4" NAME="_DangerMusicVolume" />
+        <SYMBOL ADDRESS="0x1A0AE5" NAME="_DangerMusicFadeActive" />
+        <SYMBOL ADDRESS="0x1A0AE6" NAME="_DangerMusicAble" />
         <SYMBOL ADDRESS="0x1A0C94" NAME="_StreamedSoundAble" />
         <SYMBOL ADDRESS="0x1A1430" NAME="_lbTextJustifyWindow" />
         <SYMBOL ADDRESS="0x1A2490" NAME="_IPXHandler" />
@@ -17812,8 +17975,13 @@ Same rgbRGB as palette regs </COMMENT>
         <SYMBOL ADDRESS="0x1A2AF8" NAME="IPXDatagramBackup_datagram_backup[]" MANGLED="W?datagram_backup$n[]$IPXDatagramBackup$$" />
         <SYMBOL ADDRESS="0x1A3C28" NAME="ulong_ipx_update_2(void)::.0::start_time" MANGLED="W?start_time$:.0$:?ipx_update_2$n()vnul" />
         <SYMBOL ADDRESS="0x1A3F04" NAME="_RADICAHandler" />
+        <SYMBOL ADDRESS="0x1B0000" NAME="tabwidth" />
     </SYMBOL_TABLE>
     <FUNCTIONS>
+        <FUNCTION ENTRY_POINT="0x10000">
+            <ADDRESS_RANGE START="0x10000" END="0x10002" />
+            <TYPEINFO_CMT>sub_10000</TYPEINFO_CMT>
+        </FUNCTION>
         <FUNCTION ENTRY_POINT="0x10010" NAME="UnknArr01::InitArray(void)">
             <ADDRESS_RANGE START="0x10010" END="0x1005F" />
             <TYPEINFO_CMT>void UnknArr01::InitArray(void)</TYPEINFO_CMT>
@@ -19045,9 +19213,9 @@ Same rgbRGB as palette regs </COMMENT>
             <TYPEINFO_CMT>sub_1C4A0</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0xC" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0x1C560">
+        <FUNCTION ENTRY_POINT="0x1C560" NAME="ZeroVRAM(void)">
             <ADDRESS_RANGE START="0x1C560" END="0x1C5F5" />
-            <TYPEINFO_CMT>sub_1C560</TYPEINFO_CMT>
+            <TYPEINFO_CMT>void ZeroVRAM(void)</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x4" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
         <FUNCTION ENTRY_POINT="0x1C600">
@@ -24727,9 +24895,9 @@ Same rgbRGB as palette regs </COMMENT>
                 <STACK_VAR STACK_PTR_OFFSET="-0x1C" DATATYPE="byte" SIZE="0x1" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0x5B880">
+        <FUNCTION ENTRY_POINT="0x5B880" NAME="ResetAllInputs(void)">
             <ADDRESS_RANGE START="0x5B880" END="0x5B8B8" />
-            <TYPEINFO_CMT>sub_5B880</TYPEINFO_CMT>
+            <TYPEINFO_CMT>void ResetAllInputs(void)</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
         <FUNCTION ENTRY_POINT="0x5B8C0" NAME="IFCBase::SetupColorLookups(void)">
@@ -27558,9 +27726,9 @@ doubtful name</REPEATABLE_CMT>
                 <STACK_VAR STACK_PTR_OFFSET="-0x10" DATATYPE="byte" SIZE="0x1" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0x756C0">
+        <FUNCTION ENTRY_POINT="0x756C0" NAME="Player::SetPlayerPointer(void)">
             <ADDRESS_RANGE START="0x756C0" END="0x75732" />
-            <TYPEINFO_CMT>sub_756C0</TYPEINFO_CMT>
+            <TYPEINFO_CMT>void Player::SetPlayerPointer(void)</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x4" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
         <FUNCTION ENTRY_POINT="0x75750">
@@ -30458,14 +30626,14 @@ doubtful name</REPEATABLE_CMT>
             <TYPEINFO_CMT>LbMemoryAlloc_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x4" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0x91E90">
+        <FUNCTION ENTRY_POINT="0x91E90" NAME="LbMemoryAllocLow_">
             <ADDRESS_RANGE START="0x91E90" END="0x91F13" />
-            <TYPEINFO_CMT>sub_91E90</TYPEINFO_CMT>
+            <TYPEINFO_CMT>LbMemoryAllocLow_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x4" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0x91F20">
+        <FUNCTION ENTRY_POINT="0x91F20" NAME="LbMemoryCheck_">
             <ADDRESS_RANGE START="0x91F20" END="0x92029" />
-            <TYPEINFO_CMT>sub_91F20</TYPEINFO_CMT>
+            <TYPEINFO_CMT>LbMemoryCheck_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x18" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
         <FUNCTION ENTRY_POINT="0x92030" NAME="LbMemoryFree_">
@@ -30473,25 +30641,25 @@ doubtful name</REPEATABLE_CMT>
             <TYPEINFO_CMT>LbMemoryFree_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x4" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0x920A0">
+        <FUNCTION ENTRY_POINT="0x920A0" NAME="LbMemoryGrow_">
             <ADDRESS_RANGE START="0x920A0" END="0x92168" />
-            <TYPEINFO_CMT>sub_920A0</TYPEINFO_CMT>
+            <TYPEINFO_CMT>LbMemoryGrow_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x14" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="-0x14" DATATYPE="byte" SIZE="0x1" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0x92170">
+        <FUNCTION ENTRY_POINT="0x92170" NAME="LbMemoryReset_">
             <ADDRESS_RANGE START="0x92170" END="0x921EB" />
-            <TYPEINFO_CMT>sub_92170</TYPEINFO_CMT>
+            <TYPEINFO_CMT>LbMemoryReset_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x48" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="-0x48" DATATYPE="dword" SIZE="0x4" />
                 <STACK_VAR STACK_PTR_OFFSET="-0x3C" DATATYPE="dword" SIZE="0x4" />
                 <STACK_VAR STACK_PTR_OFFSET="-0x2C" DATATYPE="byte" SIZE="0x1" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0x921F0">
+        <FUNCTION ENTRY_POINT="0x921F0" NAME="LbMemorySetup_">
             <ADDRESS_RANGE START="0x921F0" END="0x92503" />
-            <TYPEINFO_CMT>sub_921F0</TYPEINFO_CMT>
+            <TYPEINFO_CMT>LbMemorySetup_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0xC8" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="-0xAC" DATATYPE="dword" SIZE="0x4" />
                 <STACK_VAR STACK_PTR_OFFSET="-0xA0" DATATYPE="dword" SIZE="0x4" />
@@ -30550,19 +30718,19 @@ doubtful name</REPEATABLE_CMT>
                 <STACK_VAR STACK_PTR_OFFSET="-0x18" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0x92710">
+        <FUNCTION ENTRY_POINT="0x92710" NAME="game(void)">
             <ADDRESS_RANGE START="0x92710" END="0x92923" />
-            <TYPEINFO_CMT>sub_92710</TYPEINFO_CMT>
+            <TYPEINFO_CMT>void game(void)</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x18" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0x92930">
+        <FUNCTION ENTRY_POINT="0x92930" NAME="PlayIntro(void)">
             <ADDRESS_RANGE START="0x92930" END="0x929C8" />
-            <TYPEINFO_CMT>sub_92930</TYPEINFO_CMT>
+            <TYPEINFO_CMT>void PlayIntro(void)</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x4" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0x929D0">
+        <FUNCTION ENTRY_POINT="0x929D0" NAME="PlaySmacker(char_*,char,char)">
             <ADDRESS_RANGE START="0x929D0" END="0x92B8B" />
-            <TYPEINFO_CMT>sub_929D0</TYPEINFO_CMT>
+            <TYPEINFO_CMT>void PlaySmacker(char *, char, char)</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x8" REGISTER_SAVE_SIZE="0x8" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="-0x10" FRAME_PTR_OFFSET="-0x8" DATATYPE="byte" SIZE="0x1" />
                 <STACK_VAR STACK_PTR_OFFSET="-0xC" FRAME_PTR_OFFSET="-0x4" DATATYPE="byte" SIZE="0x1" />
@@ -30673,7 +30841,7 @@ doubtful name</REPEATABLE_CMT>
             <ADDRESS_RANGE START="0x94520" END="0x948DF" />
             <TYPEINFO_CMT>sub_94520</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x13C" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
-                <STACK_VAR STACK_PTR_OFFSET="-0x13C" DATATYPE="byte" SIZE="0x1" />
+                <STACK_VAR STACK_PTR_OFFSET="-0x13C" NAME="out" DATATYPE="byte" SIZE="0x1" />
                 <STACK_VAR STACK_PTR_OFFSET="-0xB9" DATATYPE="byte" SIZE="0x1" />
                 <STACK_VAR STACK_PTR_OFFSET="-0x3C" DATATYPE="dword" SIZE="0x4" />
                 <STACK_VAR STACK_PTR_OFFSET="-0x38" DATATYPE="dword" SIZE="0x4" />
@@ -30725,9 +30893,9 @@ doubtful name</REPEATABLE_CMT>
                 <STACK_VAR STACK_PTR_OFFSET="-0x1C" FRAME_PTR_OFFSET="-0x4" DATATYPE="byte" SIZE="0x1" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0x954A0">
+        <FUNCTION ENTRY_POINT="0x954A0" NAME="reset_game(void)">
             <ADDRESS_RANGE START="0x954A0" END="0x954E8" />
-            <TYPEINFO_CMT>sub_954A0</TYPEINFO_CMT>
+            <TYPEINFO_CMT>void reset_game(void)</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
         <FUNCTION ENTRY_POINT="0x954F0">
@@ -32051,9 +32219,9 @@ doubtful name</REPEATABLE_CMT>
                 <STACK_VAR STACK_PTR_OFFSET="-0x14" DATATYPE="byte" SIZE="0x1" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0x9FC90">
+        <FUNCTION ENTRY_POINT="0x9FC90" NAME="StopMusic_">
             <ADDRESS_RANGE START="0x9FC90" END="0x9FD3E" />
-            <TYPEINFO_CMT>sub_9FC90</TYPEINFO_CMT>
+            <TYPEINFO_CMT>StopMusic_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x4" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
         <FUNCTION ENTRY_POINT="0x9FD40" NAME="LbScreenSetupAnyMode_">
@@ -32279,9 +32447,9 @@ doubtful name</REPEATABLE_CMT>
             <TYPEINFO_CMT>sub_A18E8</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xA1908">
+        <FUNCTION ENTRY_POINT="0xA1908" NAME="LbMouseChangeSprite_">
             <ADDRESS_RANGE START="0xA1908" END="0xA1A67" />
-            <TYPEINFO_CMT>sub_A1908</TYPEINFO_CMT>
+            <TYPEINFO_CMT>LbMouseChangeSprite_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x2C" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="-0x2C" DATATYPE="dword" SIZE="0x4" />
                 <STACK_VAR STACK_PTR_OFFSET="-0x28" DATATYPE="dword" SIZE="0x4" />
@@ -32295,9 +32463,9 @@ doubtful name</REPEATABLE_CMT>
             <TYPEINFO_CMT>sub_A1A68</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xA1AB4">
+        <FUNCTION ENTRY_POINT="0xA1AB4" NAME="LbMouseSetup_">
             <ADDRESS_RANGE START="0xA1AB4" END="0xA1C70" />
-            <TYPEINFO_CMT>sub_A1AB4</TYPEINFO_CMT>
+            <TYPEINFO_CMT>LbMouseSetup_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x5C" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="-0x5C" DATATYPE="word" SIZE="0x2" />
                 <STACK_VAR STACK_PTR_OFFSET="-0x54" DATATYPE="word" SIZE="0x2" />
@@ -32372,9 +32540,9 @@ doubtful name</REPEATABLE_CMT>
                 <STACK_VAR STACK_PTR_OFFSET="-0x1C" DATATYPE="word" SIZE="0x2" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xA26F0">
+        <FUNCTION ENTRY_POINT="0xA26F0" NAME="LbPaletteFade_">
             <ADDRESS_RANGE START="0xA26F0" END="0xA2892" />
-            <TYPEINFO_CMT>sub_A26F0</TYPEINFO_CMT>
+            <TYPEINFO_CMT>LbPaletteFade_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x314" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="-0x314" DATATYPE="byte" SIZE="0x1" />
                 <STACK_VAR STACK_PTR_OFFSET="-0x14" DATATYPE="byte" SIZE="0x1" />
@@ -32561,9 +32729,9 @@ doubtful name</REPEATABLE_CMT>
                 <STACK_VAR STACK_PTR_OFFSET="-0x28" DATATYPE="byte" SIZE="0x1" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xA3A5C">
+        <FUNCTION ENTRY_POINT="0xA3A5C" NAME="LbVesaSetPage_">
             <ADDRESS_RANGE START="0xA3A5C" END="0xA3ACC" />
-            <TYPEINFO_CMT>sub_A3A5C</TYPEINFO_CMT>
+            <TYPEINFO_CMT>LbVesaSetPage_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x4" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
         <FUNCTION ENTRY_POINT="0xA3AD0" NAME="LbVesaGetInfo_">
@@ -33193,9 +33361,9 @@ doubtful name</REPEATABLE_CMT>
             <TYPEINFO_CMT>sub_AB0D3</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xAB0F6">
+        <FUNCTION ENTRY_POINT="0xAB0F6" NAME="atol_">
             <ADDRESS_RANGE START="0xAB0F6" END="0xAB162" />
-            <TYPEINFO_CMT>sub_AB0F6</TYPEINFO_CMT>
+            <TYPEINFO_CMT>atol_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x4" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
         <FUNCTION ENTRY_POINT="0xAB19C">
@@ -34711,9 +34879,9 @@ doubtful name</REPEATABLE_CMT>
                 <STACK_VAR STACK_PTR_OFFSET="0x4" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xB3DA0">
+        <FUNCTION ENTRY_POINT="0xB3DA0" NAME="_AIL_stop_sequence">
             <ADDRESS_RANGE START="0xB3DA0" END="0xB3E1D" />
-            <TYPEINFO_CMT>sub_B3DA0</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_AIL_stop_sequence</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0xC" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="0x4" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
@@ -34725,9 +34893,9 @@ doubtful name</REPEATABLE_CMT>
                 <STACK_VAR STACK_PTR_OFFSET="0x4" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xB3EA0">
+        <FUNCTION ENTRY_POINT="0xB3EA0" NAME="_AIL_end_sequence">
             <ADDRESS_RANGE START="0xB3EA0" END="0xB3F1D" />
-            <TYPEINFO_CMT>sub_B3EA0</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_AIL_end_sequence</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0xC" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="0x4" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
@@ -34758,9 +34926,9 @@ doubtful name</REPEATABLE_CMT>
                 <STACK_VAR STACK_PTR_OFFSET="0x8" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xB40F0">
+        <FUNCTION ENTRY_POINT="0xB40F0" NAME="_AIL_sequence_status">
             <ADDRESS_RANGE START="0xB40F0" END="0xB41FC" />
-            <TYPEINFO_CMT>sub_B40F0</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_AIL_sequence_status</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0xC" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="0x4" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
@@ -35798,26 +35966,26 @@ doubtful name</REPEATABLE_CMT>
                 <STACK_VAR STACK_PTR_OFFSET="-0x14" DATATYPE="word" SIZE="0x2" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xBBE74">
+        <FUNCTION ENTRY_POINT="0xBBE74" NAME="hook_in_emulator" LIBRARY_FUNCTION="y">
             <ADDRESS_RANGE START="0xBBE74" END="0xBBF3E" />
-            <TYPEINFO_CMT>sub_BBE74</TYPEINFO_CMT>
+            <TYPEINFO_CMT>hook_in_emulator</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x8" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="-0x8" DATATYPE="byte" SIZE="0x6" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xBBF3F">
+        <FUNCTION ENTRY_POINT="0xBBF3F" NAME="create_IDT_entry" LIBRARY_FUNCTION="y">
             <ADDRESS_RANGE START="0xBBF3F" END="0xBBF5B" />
-            <TYPEINFO_CMT>sub_BBF3F</TYPEINFO_CMT>
+            <TYPEINFO_CMT>create_IDT_entry</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xBBF5C">
+        <FUNCTION ENTRY_POINT="0xBBF5C" NAME="hook_pharlap" LIBRARY_FUNCTION="y">
             <ADDRESS_RANGE START="0xBBF5C" END="0xBBFA8" />
-            <TYPEINFO_CMT>sub_BBF5C</TYPEINFO_CMT>
+            <TYPEINFO_CMT>hook_pharlap</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xBBFA9">
+        <FUNCTION ENTRY_POINT="0xBBFA9" NAME="_set_EM_MP_bits" LIBRARY_FUNCTION="y">
             <ADDRESS_RANGE START="0xBBFA9" END="0xBBFC8" />
-            <TYPEINFO_CMT>sub_BBFA9</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_set_EM_MP_bits</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
         <FUNCTION ENTRY_POINT="0xBBFC9" NAME="__sys_fini_387_emulator" LIBRARY_FUNCTION="y">
@@ -35825,20 +35993,35 @@ doubtful name</REPEATABLE_CMT>
             <TYPEINFO_CMT>__sys_fini_387_emulator</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xBC043">
+        <FUNCTION ENTRY_POINT="0xBC043" NAME="unhook_pharlap" LIBRARY_FUNCTION="y">
             <ADDRESS_RANGE START="0xBC043" END="0xBC07D" />
-            <TYPEINFO_CMT>sub_BC043</TYPEINFO_CMT>
+            <TYPEINFO_CMT>unhook_pharlap</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xBC07E">
+        <FUNCTION ENTRY_POINT="0xBC07E" NAME="_reset_EM_MP_bits" LIBRARY_FUNCTION="y">
             <ADDRESS_RANGE START="0xBC07E" END="0xBC09E" />
-            <TYPEINFO_CMT>sub_BC07E</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_reset_EM_MP_bits</TYPEINFO_CMT>
+            <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
+        </FUNCTION>
+        <FUNCTION ENTRY_POINT="0xBC09F" NAME="__save_8087_" LIBRARY_FUNCTION="y">
+            <ADDRESS_RANGE START="0xBC09F" END="0xBC0A3" />
+            <TYPEINFO_CMT>__save_8087_</TYPEINFO_CMT>
+            <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
+        </FUNCTION>
+        <FUNCTION ENTRY_POINT="0xBC0A4" NAME="__rest_8087_" LIBRARY_FUNCTION="y">
+            <ADDRESS_RANGE START="0xBC0A4" END="0xBC0A7" />
+            <TYPEINFO_CMT>__rest_8087_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
         <FUNCTION ENTRY_POINT="0xBC0A8" NAME="__init_8087_" LIBRARY_FUNCTION="y">
             <ADDRESS_RANGE START="0xBC0A8" END="0xBC0D8" />
             <TYPEINFO_CMT>__init_8087_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x4" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
+        </FUNCTION>
+        <FUNCTION ENTRY_POINT="0xBC0D9" NAME="_fpreset_" LIBRARY_FUNCTION="y">
+            <ADDRESS_RANGE START="0xBC0D9" END="0xBC0E2" />
+            <TYPEINFO_CMT>_fpreset_</TYPEINFO_CMT>
+            <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
         <FUNCTION ENTRY_POINT="0xBC0E3" NAME="__chk8087_" LIBRARY_FUNCTION="y">
             <ADDRESS_RANGE START="0xBC0E3" END="0xBC128" />
@@ -36009,12 +36192,15 @@ doubtful name</REPEATABLE_CMT>
                 <STACK_VAR STACK_PTR_OFFSET="-0x16" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xBC7BD" LIBRARY_FUNCTION="y">
-            <ADDRESS_RANGE START="0xBC7BD" END="0xBC7C2" />
-            <REPEATABLE_CMT>W?seekoff$:streambuf$n(lii)l
-doubtful name</REPEATABLE_CMT>
-            <TYPEINFO_CMT>sub_BC7BD</TYPEINFO_CMT>
+        <FUNCTION ENTRY_POINT="0xBC7A0">
+            <ADDRESS_RANGE START="0xBC7A0" END="0xBC7D3" />
+            <TYPEINFO_CMT>sub_BC7A0</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
+        </FUNCTION>
+        <FUNCTION ENTRY_POINT="0xBC7D4">
+            <ADDRESS_RANGE START="0xBC7D4" END="0xBC810" />
+            <TYPEINFO_CMT>sub_BC7D4</TYPEINFO_CMT>
+            <STACK_FRAME LOCAL_VAR_SIZE="0x8" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
         <FUNCTION ENTRY_POINT="0xBC814">
             <ADDRESS_RANGE START="0xBC814" END="0xBC84B" />
@@ -36061,9 +36247,9 @@ doubtful name</REPEATABLE_CMT>
             <TYPEINFO_CMT>__doserror_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xBCB20">
+        <FUNCTION ENTRY_POINT="0xBCB20" NAME="CallIPX_">
             <ADDRESS_RANGE START="0xBCB20" END="0xBCB97" />
-            <TYPEINFO_CMT>sub_BCB20</TYPEINFO_CMT>
+            <TYPEINFO_CMT>CallIPX_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x34" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="-0x34" DATATYPE="dword" SIZE="0x4" />
                 <STACK_VAR STACK_PTR_OFFSET="-0x30" DATATYPE="dword" SIZE="0x4" />
@@ -36071,9 +36257,9 @@ doubtful name</REPEATABLE_CMT>
                 <STACK_VAR STACK_PTR_OFFSET="-0x18" DATATYPE="byte" SIZE="0x1" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xBCB98">
+        <FUNCTION ENTRY_POINT="0xBCB98" NAME="CallRealModeInterrupt_">
             <ADDRESS_RANGE START="0xBCB98" END="0xBCBE9" />
-            <TYPEINFO_CMT>sub_BCB98</TYPEINFO_CMT>
+            <TYPEINFO_CMT>CallRealModeInterrupt_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x34" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="-0x34" DATATYPE="dword" SIZE="0x4" />
                 <STACK_VAR STACK_PTR_OFFSET="-0x30" DATATYPE="dword" SIZE="0x4" />
@@ -36081,9 +36267,9 @@ doubtful name</REPEATABLE_CMT>
                 <STACK_VAR STACK_PTR_OFFSET="-0x18" DATATYPE="byte" SIZE="0x1" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xBCBEC">
+        <FUNCTION ENTRY_POINT="0xBCBEC" NAME="setup_bullfrog_header_">
             <ADDRESS_RANGE START="0xBCBEC" END="0xBCC42" />
-            <TYPEINFO_CMT>sub_BCBEC</TYPEINFO_CMT>
+            <TYPEINFO_CMT>setup_bullfrog_header_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x10" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
         <FUNCTION ENTRY_POINT="0xBCC44" NAME="ipx_create_session_">
@@ -37562,24 +37748,24 @@ doubtful name</REPEATABLE_CMT>
                 <STACK_VAR STACK_PTR_OFFSET="0x4" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xC7830">
+        <FUNCTION ENTRY_POINT="0xC7830" NAME="_MEM_alloc_lock">
             <ADDRESS_RANGE START="0xC7830" END="0xC7850" />
-            <TYPEINFO_CMT>sub_C7830</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_MEM_alloc_lock</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x4" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="0x4" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xC7860">
+        <FUNCTION ENTRY_POINT="0xC7860" NAME="_MEM_free_lock">
             <ADDRESS_RANGE START="0xC7860" END="0xC7880" />
-            <TYPEINFO_CMT>sub_C7860</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_MEM_free_lock</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x4" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="0x4" DATATYPE="dword" SIZE="0x4" />
                 <STACK_VAR STACK_PTR_OFFSET="0x8" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xC7890">
+        <FUNCTION ENTRY_POINT="0xC7890" NAME="_MEM_alloc_DOS">
             <ADDRESS_RANGE START="0xC7890" END="0xC78D9" />
-            <TYPEINFO_CMT>sub_C7890</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_MEM_alloc_DOS</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x4" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="0x4" DATATYPE="dword" SIZE="0x4" />
                 <STACK_VAR STACK_PTR_OFFSET="0x8" DATATYPE="dword" SIZE="0x4" />
@@ -37587,16 +37773,16 @@ doubtful name</REPEATABLE_CMT>
                 <STACK_VAR STACK_PTR_OFFSET="0x10" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xC78E0">
+        <FUNCTION ENTRY_POINT="0xC78E0" NAME="_MEM_free_DOS">
             <ADDRESS_RANGE START="0xC78E0" END="0xC78E8" />
-            <TYPEINFO_CMT>sub_C78E0</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_MEM_free_DOS</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="0x4" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xC78F0">
+        <FUNCTION ENTRY_POINT="0xC78F0" NAME="_VMM_lock_range">
             <ADDRESS_RANGE START="0xC78F0" END="0xC795C" />
-            <TYPEINFO_CMT>sub_C78F0</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_VMM_lock_range</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x3C" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="-0x3C" DATATYPE="dword" SIZE="0x4" />
                 <STACK_VAR STACK_PTR_OFFSET="-0x38" DATATYPE="dword" SIZE="0x4" />
@@ -37632,17 +37818,17 @@ doubtful name</REPEATABLE_CMT>
                 <STACK_VAR STACK_PTR_OFFSET="0x8" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xC79F0">
+        <FUNCTION ENTRY_POINT="0xC79F0" NAME="_VMM_unlock">
             <ADDRESS_RANGE START="0xC79F0" END="0xC7A04" />
-            <TYPEINFO_CMT>sub_C79F0</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_VMM_unlock</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="0x4" DATATYPE="dword" SIZE="0x4" />
                 <STACK_VAR STACK_PTR_OFFSET="0x8" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xC7A10">
+        <FUNCTION ENTRY_POINT="0xC7A10" NAME="_DLL_size">
             <ADDRESS_RANGE START="0xC7A10" END="0xC7B4E" />
-            <TYPEINFO_CMT>sub_C7A10</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_DLL_size</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0xDC" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="-0xDC" DATATYPE="byte" SIZE="0x1" />
                 <STACK_VAR STACK_PTR_OFFSET="-0x9C" DATATYPE="dword" SIZE="0x4" />
@@ -37654,9 +37840,9 @@ doubtful name</REPEATABLE_CMT>
                 <STACK_VAR STACK_PTR_OFFSET="0x8" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xC7B50">
+        <FUNCTION ENTRY_POINT="0xC7B50" NAME="_DLL_load">
             <ADDRESS_RANGE START="0xC7B50" END="0xC80BE" />
-            <TYPEINFO_CMT>sub_C7B50</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_DLL_load</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x2E4" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="-0x2E4" NAME="fh" DATATYPE="dword" SIZE="0x4" />
                 <STACK_VAR STACK_PTR_OFFSET="-0x154" DATATYPE="byte" SIZE="0x1" />
@@ -37701,38 +37887,38 @@ doubtful name</REPEATABLE_CMT>
                 <STACK_VAR STACK_PTR_OFFSET="0xC" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xC80C0">
+        <FUNCTION ENTRY_POINT="0xC80C0" NAME="_FILE_error">
             <ADDRESS_RANGE START="0xC80C0" END="0xC80C5" />
-            <TYPEINFO_CMT>sub_C80C0</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_FILE_error</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xC80D0">
+        <FUNCTION ENTRY_POINT="0xC80D0" NAME="_FILE_size">
             <ADDRESS_RANGE START="0xC80D0" END="0xC811E" />
-            <TYPEINFO_CMT>sub_C80D0</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_FILE_size</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x4" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="0x4" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xC8120">
+        <FUNCTION ENTRY_POINT="0xC8120" NAME="_FILE_read">
             <ADDRESS_RANGE START="0xC8120" END="0xC81E2" />
-            <TYPEINFO_CMT>sub_C8120</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_FILE_read</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x10" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="0x4" DATATYPE="dword" SIZE="0x4" />
                 <STACK_VAR STACK_PTR_OFFSET="0x8" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xC81F0">
+        <FUNCTION ENTRY_POINT="0xC81F0" NAME="_FILE_write">
             <ADDRESS_RANGE START="0xC81F0" END="0xC8278" />
-            <TYPEINFO_CMT>sub_C81F0</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_FILE_write</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x10" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="0x4" DATATYPE="dword" SIZE="0x4" />
                 <STACK_VAR STACK_PTR_OFFSET="0x8" DATATYPE="dword" SIZE="0x4" />
                 <STACK_VAR STACK_PTR_OFFSET="0xC" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xC8280">
+        <FUNCTION ENTRY_POINT="0xC8280" NAME="_FILE_append">
             <ADDRESS_RANGE START="0xC8280" END="0xC8303" />
-            <TYPEINFO_CMT>sub_C8280</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_FILE_append</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x10" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="0x4" DATATYPE="dword" SIZE="0x4" />
                 <STACK_VAR STACK_PTR_OFFSET="0x8" DATATYPE="dword" SIZE="0x4" />
@@ -39800,6 +39986,15 @@ doubtful name</REPEATABLE_CMT>
         <FUNCTION ENTRY_POINT="0xD2B04" NAME="__int7_pl3" LIBRARY_FUNCTION="y">
             <ADDRESS_RANGE START="0xD2B04" END="0xD2B24" />
             <TYPEINFO_CMT>__int7_pl3</TYPEINFO_CMT>
+        </FUNCTION>
+        <FUNCTION ENTRY_POINT="0xD2B28" NAME="__int7_X32VM" LIBRARY_FUNCTION="y">
+            <ADDRESS_RANGE START="0xD2B28" END="0xD2B71" />
+            <TYPEINFO_CMT>__int7_X32VM</TYPEINFO_CMT>
+            <STACK_FRAME LOCAL_VAR_SIZE="0x3A" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
+                <STACK_VAR STACK_PTR_OFFSET="-0x3A" DATATYPE="word" SIZE="0x2" />
+                <STACK_VAR STACK_PTR_OFFSET="-0x14" DATATYPE="dword" SIZE="0x4" />
+                <STACK_VAR STACK_PTR_OFFSET="0xC" DATATYPE="dword" SIZE="0x4" />
+            </STACK_FRAME>
         </FUNCTION>
         <FUNCTION ENTRY_POINT="0xD2B74" NAME="__int7" LIBRARY_FUNCTION="y">
             <ADDRESS_RANGE START="0xD2B74" END="0xD2B96" />
@@ -42627,6 +42822,11 @@ doubtful name</REPEATABLE_CMT>
             <TYPEINFO_CMT>void unexpected(void)</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
+        <FUNCTION ENTRY_POINT="0xE04DE" NAME="_setjmp_" LIBRARY_FUNCTION="y">
+            <ADDRESS_RANGE START="0xE04DE" END="0xE0512" />
+            <TYPEINFO_CMT>_setjmp_</TYPEINFO_CMT>
+            <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
+        </FUNCTION>
         <FUNCTION ENTRY_POINT="0xE0594" NAME="__wcpp_2_alloc_exc__" LIBRARY_FUNCTION="y">
             <ADDRESS_RANGE START="0xE0594" END="0xE06CE" />
             <TYPEINFO_CMT>__wcpp_2_alloc_exc__</TYPEINFO_CMT>
@@ -42830,9 +43030,9 @@ doubtful name</REPEATABLE_CMT>
                 <STACK_VAR STACK_PTR_OFFSET="-0x14" FRAME_PTR_OFFSET="-0x10" DATATYPE="double" SIZE="0x8" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xE165E">
+        <FUNCTION ENTRY_POINT="0xE165E" NAME="verify_pentium_fdiv_bug_" LIBRARY_FUNCTION="y">
             <ADDRESS_RANGE START="0xE165E" END="0xE16B2" />
-            <TYPEINFO_CMT>sub_E165E</TYPEINFO_CMT>
+            <TYPEINFO_CMT>verify_pentium_fdiv_bug_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x10" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="-0x10" DATATYPE="double" SIZE="0x8" />
                 <STACK_VAR STACK_PTR_OFFSET="-0x8" DATATYPE="double" SIZE="0x8" />
@@ -42853,9 +43053,9 @@ doubtful name</REPEATABLE_CMT>
             <TYPEINFO_CMT>_matherr_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x4" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xE1730">
+        <FUNCTION ENTRY_POINT="0xE1730" NAME="__matherr" LIBRARY_FUNCTION="y">
             <ADDRESS_RANGE START="0xE1730" END="0xE1734" />
-            <TYPEINFO_CMT>sub_E1730</TYPEINFO_CMT>
+            <TYPEINFO_CMT>__matherr</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
         <FUNCTION ENTRY_POINT="0xE1735" NAME="__get_std_stream_" LIBRARY_FUNCTION="y">
@@ -42863,26 +43063,38 @@ doubtful name</REPEATABLE_CMT>
             <TYPEINFO_CMT>__get_std_stream_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xE1754">
+        <FUNCTION ENTRY_POINT="0xE1754" NAME="matherr__" LIBRARY_FUNCTION="y">
             <ADDRESS_RANGE START="0xE1754" END="0xE1756" />
-            <TYPEINFO_CMT>sub_E1754</TYPEINFO_CMT>
+            <TYPEINFO_CMT>matherr__</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xE1906">
+        <FUNCTION ENTRY_POINT="0xE1760" NAME="prop_text">
+            <ADDRESS_RANGE START="0xE1760" END="0xE1905" />
+            <TYPEINFO_CMT>prop_text</TYPEINFO_CMT>
+            <STACK_FRAME LOCAL_VAR_SIZE="0xC" REGISTER_SAVE_SIZE="0x4" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
+                <STACK_VAR STACK_PTR_OFFSET="-0xC" FRAME_PTR_OFFSET="-0x8" DATATYPE="dword" SIZE="0x4" />
+                <STACK_VAR STACK_PTR_OFFSET="-0x8" FRAME_PTR_OFFSET="-0x4" DATATYPE="dword" SIZE="0x4" />
+                <STACK_VAR STACK_PTR_OFFSET="0x4" FRAME_PTR_OFFSET="0x8" DATATYPE="dword" SIZE="0x4" />
+                <STACK_VAR STACK_PTR_OFFSET="0x8" FRAME_PTR_OFFSET="0xC" DATATYPE="dword" SIZE="0x4" />
+                <STACK_VAR STACK_PTR_OFFSET="0xC" FRAME_PTR_OFFSET="0x10" DATATYPE="dword" SIZE="0x4" />
+                <STACK_VAR STACK_PTR_OFFSET="0x10" FRAME_PTR_OFFSET="0x14" DATATYPE="byte" SIZE="0x1" />
+            </STACK_FRAME>
+        </FUNCTION>
+        <FUNCTION ENTRY_POINT="0xE1906" NAME="make_fade_table_">
             <ADDRESS_RANGE START="0xE1906" END="0xE19B0" />
-            <TYPEINFO_CMT>sub_E1906</TYPEINFO_CMT>
+            <TYPEINFO_CMT>make_fade_table_</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0xC" REGISTER_SAVE_SIZE="0x4" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0">
                 <STACK_VAR STACK_PTR_OFFSET="-0xA" FRAME_PTR_OFFSET="-0x6" DATATYPE="word" SIZE="0x2" />
                 <STACK_VAR STACK_PTR_OFFSET="-0x7" FRAME_PTR_OFFSET="-0x3" DATATYPE="byte" SIZE="0x1" />
                 <STACK_VAR STACK_PTR_OFFSET="-0x6" FRAME_PTR_OFFSET="-0x2" DATATYPE="word" SIZE="0x2" />
-                <STACK_VAR STACK_PTR_OFFSET="0x4" FRAME_PTR_OFFSET="0x8" DATATYPE="dword" SIZE="0x4" />
-                <STACK_VAR STACK_PTR_OFFSET="0x8" FRAME_PTR_OFFSET="0xC" DATATYPE="dword" SIZE="0x4" />
-                <STACK_VAR STACK_PTR_OFFSET="0xC" FRAME_PTR_OFFSET="0x10" DATATYPE="byte" SIZE="0x1" />
-                <STACK_VAR STACK_PTR_OFFSET="0x10" FRAME_PTR_OFFSET="0x14" DATATYPE="byte" SIZE="0x1" />
-                <STACK_VAR STACK_PTR_OFFSET="0x14" FRAME_PTR_OFFSET="0x18" DATATYPE="byte" SIZE="0x1" />
-                <STACK_VAR STACK_PTR_OFFSET="0x18" FRAME_PTR_OFFSET="0x1C" DATATYPE="word" SIZE="0x2" />
-                <STACK_VAR STACK_PTR_OFFSET="0x1C" FRAME_PTR_OFFSET="0x20" DATATYPE="word" SIZE="0x2" />
-                <STACK_VAR STACK_PTR_OFFSET="0x20" FRAME_PTR_OFFSET="0x24" DATATYPE="word" SIZE="0x2" />
+                <STACK_VAR STACK_PTR_OFFSET="0x4" FRAME_PTR_OFFSET="0x8" NAME="inp" DATATYPE="pointer" SIZE="0x4" />
+                <STACK_VAR STACK_PTR_OFFSET="0x8" FRAME_PTR_OFFSET="0xC" NAME="out" DATATYPE="pointer" SIZE="0x4" />
+                <STACK_VAR STACK_PTR_OFFSET="0xC" FRAME_PTR_OFFSET="0x10" NAME="cr" DATATYPE="dword" SIZE="0x4" />
+                <STACK_VAR STACK_PTR_OFFSET="0x10" FRAME_PTR_OFFSET="0x14" NAME="cg" DATATYPE="dword" SIZE="0x4" />
+                <STACK_VAR STACK_PTR_OFFSET="0x14" FRAME_PTR_OFFSET="0x18" NAME="cb" DATATYPE="dword" SIZE="0x4" />
+                <STACK_VAR STACK_PTR_OFFSET="0x18" FRAME_PTR_OFFSET="0x1C" NAME="ir" DATATYPE="dword" SIZE="0x4" />
+                <STACK_VAR STACK_PTR_OFFSET="0x1C" FRAME_PTR_OFFSET="0x20" NAME="ig" DATATYPE="dword" SIZE="0x4" />
+                <STACK_VAR STACK_PTR_OFFSET="0x20" FRAME_PTR_OFFSET="0x24" NAME="ib" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
         </FUNCTION>
         <FUNCTION ENTRY_POINT="0xE19C0">
@@ -43026,49 +43238,54 @@ doubtful name</REPEATABLE_CMT>
                 <STACK_VAR STACK_PTR_OFFSET="0x18" FRAME_PTR_OFFSET="0x1C" DATATYPE="dword" SIZE="0x4" />
             </STACK_FRAME>
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xEB120">
+        <FUNCTION ENTRY_POINT="0xEB111" NAME="j_SmackInternal007_sub1">
+            <ADDRESS_RANGE START="0xEB111" END="0xEB112" />
+            <TYPEINFO_CMT>j_SmackInternal007_sub1</TYPEINFO_CMT>
+            <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
+        </FUNCTION>
+        <FUNCTION ENTRY_POINT="0xEB120" NAME="_SmackInternal007_sub1">
             <ADDRESS_RANGE START="0xEB120" END="0xEB1D0" />
-            <TYPEINFO_CMT>sub_EB120</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_SmackInternal007_sub1</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x4" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xEB1D1">
+        <FUNCTION ENTRY_POINT="0xEB1D1" NAME="j_SmackInternal005">
             <ADDRESS_RANGE START="0xEB1D1" END="0xEB1D2" />
-            <TYPEINFO_CMT>sub_EB1D1</TYPEINFO_CMT>
+            <TYPEINFO_CMT>j_SmackInternal005</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xEB1E0">
+        <FUNCTION ENTRY_POINT="0xEB1E0" NAME="_SmackInternal005">
             <ADDRESS_RANGE START="0xEB1E0" END="0xEB20F" />
-            <TYPEINFO_CMT>sub_EB1E0</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_SmackInternal005</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xEB210">
+        <FUNCTION ENTRY_POINT="0xEB210" NAME="_SmackInternal006">
             <ADDRESS_RANGE START="0xEB210" END="0xEB23F" />
-            <TYPEINFO_CMT>sub_EB210</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_SmackInternal006</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x4" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xEB240">
+        <FUNCTION ENTRY_POINT="0xEB240" NAME="_SmackInternal007">
             <ADDRESS_RANGE START="0xEB240" END="0xEB595" />
-            <TYPEINFO_CMT>sub_EB240</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_SmackInternal007</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xEBF56">
+        <FUNCTION ENTRY_POINT="0xEBF56" NAME="j_SmackInternalSwitch1_case000">
             <ADDRESS_RANGE START="0xEBF56" END="0xEBF57" />
-            <TYPEINFO_CMT>sub_EBF56</TYPEINFO_CMT>
+            <TYPEINFO_CMT>j_SmackInternalSwitch1_case000</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xEBF60">
+        <FUNCTION ENTRY_POINT="0xEBF60" NAME="_SmackInternalSwitch1_case000">
             <ADDRESS_RANGE START="0xEBF60" END="0xEBF6B" />
-            <TYPEINFO_CMT>sub_EBF60</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_SmackInternalSwitch1_case000</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xEBF6C">
+        <FUNCTION ENTRY_POINT="0xEBF6C" NAME="_SmackInternalSwitch1_case001">
             <ADDRESS_RANGE START="0xEBF6C" END="0xEBF77" />
-            <TYPEINFO_CMT>sub_EBF6C</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_SmackInternalSwitch1_case001</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xEBF78">
+        <FUNCTION ENTRY_POINT="0xEBF78" NAME="_SmackInternalSwitch1_case002">
             <ADDRESS_RANGE START="0xEBF78" END="0xEBF83" />
-            <TYPEINFO_CMT>sub_EBF78</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_SmackInternalSwitch1_case002</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
         <FUNCTION ENTRY_POINT="0xEBF84">
@@ -44311,34 +44528,34 @@ doubtful name</REPEATABLE_CMT>
             <TYPEINFO_CMT>sub_ECCA8</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xECCB4">
+        <FUNCTION ENTRY_POINT="0xECCB4" NAME="_SmackInternalSwitch1_case251">
             <ADDRESS_RANGE START="0xECCB4" END="0xECCBF" />
-            <TYPEINFO_CMT>sub_ECCB4</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_SmackInternalSwitch1_case251</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xECCC0">
+        <FUNCTION ENTRY_POINT="0xECCC0" NAME="_SmackInternalSwitch1_case252">
             <ADDRESS_RANGE START="0xECCC0" END="0xECCCB" />
-            <TYPEINFO_CMT>sub_ECCC0</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_SmackInternalSwitch1_case252</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xECCCC">
+        <FUNCTION ENTRY_POINT="0xECCCC" NAME="_SmackInternalSwitch1_case253">
             <ADDRESS_RANGE START="0xECCCC" END="0xECCD7" />
-            <TYPEINFO_CMT>sub_ECCCC</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_SmackInternalSwitch1_case253</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xECCD8">
+        <FUNCTION ENTRY_POINT="0xECCD8" NAME="_SmackInternalSwitch1_case254">
             <ADDRESS_RANGE START="0xECCD8" END="0xECCE3" />
-            <TYPEINFO_CMT>sub_ECCD8</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_SmackInternalSwitch1_case254</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xECCE4">
+        <FUNCTION ENTRY_POINT="0xECCE4" NAME="_SmackInternalSwitch1_case255">
             <ADDRESS_RANGE START="0xECCE4" END="0xECCEF" />
-            <TYPEINFO_CMT>sub_ECCE4</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_SmackInternalSwitch1_case255</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xECCF0">
+        <FUNCTION ENTRY_POINT="0xECCF0" NAME="_SmackInternal010">
             <ADDRESS_RANGE START="0xECCF0" END="0xED025" />
-            <TYPEINFO_CMT>sub_ECCF0</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_SmackInternal010</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
         <FUNCTION ENTRY_POINT="0xED026">
@@ -44346,9 +44563,9 @@ doubtful name</REPEATABLE_CMT>
             <TYPEINFO_CMT>sub_ED026</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xED030">
+        <FUNCTION ENTRY_POINT="0xED030" NAME="_SmackInternal011">
             <ADDRESS_RANGE START="0xED030" END="0xED835" />
-            <TYPEINFO_CMT>sub_ED030</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_SmackInternal011</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
         <FUNCTION ENTRY_POINT="0xED836">
@@ -44356,9 +44573,9 @@ doubtful name</REPEATABLE_CMT>
             <TYPEINFO_CMT>sub_ED836</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xED840">
+        <FUNCTION ENTRY_POINT="0xED840" NAME="_SmackInternal012">
             <ADDRESS_RANGE START="0xED840" END="0xED985" />
-            <TYPEINFO_CMT>sub_ED840</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_SmackInternal012</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
         <FUNCTION ENTRY_POINT="0xED986">
@@ -44366,9 +44583,9 @@ doubtful name</REPEATABLE_CMT>
             <TYPEINFO_CMT>sub_ED986</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
-        <FUNCTION ENTRY_POINT="0xED990">
+        <FUNCTION ENTRY_POINT="0xED990" NAME="_SmackInternal013">
             <ADDRESS_RANGE START="0xED990" END="0xEDB15" />
-            <TYPEINFO_CMT>sub_ED990</TYPEINFO_CMT>
+            <TYPEINFO_CMT>_SmackInternal013</TYPEINFO_CMT>
             <STACK_FRAME LOCAL_VAR_SIZE="0x0" REGISTER_SAVE_SIZE="0x0" RETURN_ADDR_SIZE="0x4" BYTES_PURGED="0x0" />
         </FUNCTION>
         <FUNCTION ENTRY_POINT="0xEDB16" NAME="j_Unsmack">
@@ -49719,7 +49936,6 @@ doubtful name</REPEATABLE_CMT>
         <MEMORY_REFERENCE ADDRESS="0xEAF83" OPERAND_INDEX="1" TO_ADDRESS="0x10C930" PRIMARY="y" />
         <MEMORY_REFERENCE ADDRESS="0xEAFBF" OPERAND_INDEX="1" TO_ADDRESS="0x10C940" PRIMARY="y" />
         <MEMORY_REFERENCE ADDRESS="0xEB018" OPERAND_INDEX="1" TO_ADDRESS="0x10C910" PRIMARY="y" />
-        <MEMORY_REFERENCE ADDRESS="0xEB155" OPERAND_INDEX="1" TO_ADDRESS="0x10000" PRIMARY="y" />
         <MEMORY_REFERENCE ADDRESS="0xEB51C" OPERAND_INDEX="0" TO_ADDRESS="0xEB583" PRIMARY="y" />
         <MEMORY_REFERENCE ADDRESS="0xEBD2C" OPERAND_INDEX="0" TO_ADDRESS="0xEBD93" PRIMARY="y" />
         <MEMORY_REFERENCE ADDRESS="0xEBEDC" OPERAND_INDEX="0" TO_ADDRESS="0xEBF43" PRIMARY="y" />

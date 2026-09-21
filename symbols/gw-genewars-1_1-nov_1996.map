@@ -27,6 +27,7 @@
  0001:00014BF0       W?GetConfigs$:Config$n()uc
  0001:000156E0       jpt_159CF
  0001:000159BC       def_159CF
+ 0001:0001C560       W?ZeroVRAM$n()v
  0001:00021354       jpt_21AEB
  0001:00021D0B       def_21AEB
  0001:00024514       jpt_2473D
@@ -112,6 +113,7 @@
  0001:00056FE0       W?InitArray$:Plant$n()v
  0001:00057900       jpt_57A0C
  0001:0005792F       def_57A0C
+ 0001:0005B880       W?ResetAllInputs$n()v
  0001:0005B8C0       W?SetupColorLookups$:IFCBase$n()v
  0001:00061AD0       W?GenericHelpDraw$:HelpDraw$n(pn$MyGadget$$pna)v
  0001:00064378       jpt_643B6
@@ -139,6 +141,7 @@
  0001:00073912       def_72EEA
  0001:000751DC       jpt_7520F
  0001:000753C2       def_7520F
+ 0001:000756C0       W?SetPlayerPointer$:Player$n()v
  0001:00075734       jpt_7583A
  0001:0007581E       def_7583A
  0001:00075DB0       nullsub_2
@@ -177,7 +180,15 @@
  0001:0008A2A0       jpt_8A28B
  0001:0008A720       nullsub_14
  0001:00091E00       LbMemoryAlloc_
+ 0001:00091E90       LbMemoryAllocLow_
+ 0001:00091F20       LbMemoryCheck_
  0001:00092030       LbMemoryFree_
+ 0001:000920A0       LbMemoryGrow_
+ 0001:00092170       LbMemoryReset_
+ 0001:000921F0       LbMemorySetup_
+ 0001:00092710       W?game$n()v
+ 0001:00092930       W?PlayIntro$n()v
+ 0001:000929D0       W?PlaySmacker$n(pnaucuc)v
  0001:00092F7C       jpt_9358B
  0001:0009315C       def_9358B
  0001:00093BB0       SoundProgressLog_
@@ -190,6 +201,7 @@
  0001:00094AA4       jpt_94D56
  0001:00094AC0       W?setup_game$n()v
  0001:00094D98       def_94D56
+ 0001:000954A0       W?reset_game$n()v
  0001:00095C40       _get_osfhandle__0
  0001:00095C50       _os_handle__0
  0001:00095CC0       nullsub_15
@@ -252,6 +264,7 @@
  0001:00098FB0       W?DrawMySpriteHR$n(sspn$TbSprite$$)v
  0001:00099A20       W?DrawMyRemapSpriteHR$n(sspn$TbSprite$$pnuc)v
  0001:0009A590       W?DrawMyDitherRemapSpriteHR$n(sspn$TbSprite$$pnucpnuc)v
+ 0001:0009FC90       StopMusic_
  0001:0009FD40       LbScreenSetupAnyMode_
  0001:0009FEB0       LbScreenClearGraphicsWindow_
  0001:0009FEEC       LbScreenClear_
@@ -279,9 +292,12 @@
  0001:000A1690       StopAllSampleFadeTimers_
  0001:000A16F0       LbMousePlace_
  0001:000A1824       LbMouseRemove_
+ 0001:000A1908       LbMouseChangeSprite_
+ 0001:000A1AB4       LbMouseSetup_
  0001:000A1C74       LbMouseReset_
  0001:000A1CF8       LbMouseSuspend_
  0001:000A258C       W?screen_remove$n(ul)l
+ 0001:000A26F0       LbPaletteFade_
  0001:000A28A4       LbPaletteFindColour_
  0001:000A2CCC       LbPaletteDraw_
  0001:000A2DD0       StopAllSamples_
@@ -291,6 +307,7 @@
  0001:000A38BE       __CHP
  0001:000A38DC       j___sys_init_387_emulator
  0001:000A38E1       j___sys_fini_387_emulator
+ 0001:000A3A5C       LbVesaSetPage_
  0001:000A3AD0       LbVesaGetInfo_
  0001:000A4DDA       j___clock_
  0001:000A4DE0       memmove_
@@ -302,6 +319,7 @@
  0001:000AB074       unknown_libname_1
  0001:000AB091       unknown_libname_2
  0001:000AB0AD       unknown_libname_3
+ 0001:000AB0F6       atol_
  0001:000AB6A8       LbNetworkReset_
  0001:000AB708       LbNetworkSessionActive_
  0001:000AB750       LbNetworkShutDownListeners_
@@ -426,6 +444,9 @@
  0001:000B2240       _AIL_set_sample_volume
  0001:000B23F0       _AIL_sample_status
  0001:000B2940       _AIL_set_digital_master_volume
+ 0001:000B3DA0       _AIL_stop_sequence
+ 0001:000B3EA0       _AIL_end_sequence
+ 0001:000B40F0       _AIL_sequence_status
  0001:000B60E0       _AIL_destroy_wave_synthesizer
  0001:000B6160       AILDEBUG_end_
  0001:000B618C       LbDrawHVLine_
@@ -493,7 +514,13 @@
  0001:000BBB43       int386x_
  0001:000BBE29       __setEFGfmt_
  0001:000BBE44       __sys_init_387_emulator
+ 0001:000BBE74       hook_in_emulator
+ 0001:000BBF3F       create_IDT_entry
+ 0001:000BBF5C       hook_pharlap
+ 0001:000BBFA9       _set_EM_MP_bits
  0001:000BBFC9       __sys_fini_387_emulator
+ 0001:000BC043       unhook_pharlap
+ 0001:000BC07E       _reset_EM_MP_bits
  0001:000BC09F       __save_8087_
  0001:000BC0A4       __rest_8087_
  0001:000BC0A8       __init_8087_
@@ -526,6 +553,9 @@
  0001:000BC65D       __checkIsDBCS_
  0001:000BC68B       dos_get_dbcs_lead_table_
  0001:000BCB0A       __doserror_
+ 0001:000BCB20       CallIPX_
+ 0001:000BCB98       CallRealModeInterrupt_
+ 0001:000BCBEC       setup_bullfrog_header_
  0001:000BCC44       ipx_create_session_
  0001:000BD888       ipx_add_new_player_
  0001:000BDCAC       ipx_exchange_packets_
@@ -628,8 +658,21 @@
  0001:000C62F0       SMACKOPEN
  0001:000C7810       unknown_libname_11
  0001:000C7820       unknown_libname_12
+ 0001:000C7830       _MEM_alloc_lock
+ 0001:000C7860       _MEM_free_lock
+ 0001:000C7890       _MEM_alloc_DOS
+ 0001:000C78E0       _MEM_free_DOS
+ 0001:000C78F0       _VMM_lock_range
  0001:000C7960       _VMM_unlock_range
  0001:000C79D0       _VMM_lock
+ 0001:000C79F0       _VMM_unlock
+ 0001:000C7A10       _DLL_size
+ 0001:000C7B50       _DLL_load
+ 0001:000C80C0       _FILE_error
+ 0001:000C80D0       _FILE_size
+ 0001:000C8120       _FILE_read
+ 0001:000C81F0       _FILE_write
+ 0001:000C8280       _FILE_append
  0001:000C8304       getenv_
  0001:000C8365       cget_string_
  0001:000C838E       uncget_string_
@@ -899,10 +942,15 @@
  0001:000E1570       _nmsize_
  0001:000E1579       __math1err_
  0001:000E1583       __math2err_
+ 0001:000E165E       verify_pentium_fdiv_bug_
  0001:000E16B3       _set_matherr_
  0001:000E16B9       __rterrmsg_
  0001:000E1701       _matherr_
+ 0001:000E1730       __matherr
  0001:000E1735       __get_std_stream_
+ 0001:000E1754       matherr__
+ 0001:000E1760       prop_text
+ 0001:000E1906       make_fade_table_
  0001:000E1B27       jpt_E1B20
  0001:000E2434       jpt_E242D
  0001:000E2D62       jpt_E2D5B
@@ -923,6 +971,25 @@
  0001:000EAE90       _SmackGetSizeTables
  0001:000EAE96       j_SmackDoTables
  0001:000EAEA0       _SmackDoTables
+ 0001:000EB111       j_SmackInternal007_sub1
+ 0001:000EB120       _SmackInternal007_sub1
+ 0001:000EB1D1       j_SmackInternal005
+ 0001:000EB1E0       _SmackInternal005
+ 0001:000EB210       _SmackInternal006
+ 0001:000EB240       _SmackInternal007
+ 0001:000EBF56       j_SmackInternalSwitch1_case000
+ 0001:000EBF60       _SmackInternalSwitch1_case000
+ 0001:000EBF6C       _SmackInternalSwitch1_case001
+ 0001:000EBF78       _SmackInternalSwitch1_case002
+ 0001:000ECCB4       _SmackInternalSwitch1_case251
+ 0001:000ECCC0       _SmackInternalSwitch1_case252
+ 0001:000ECCCC       _SmackInternalSwitch1_case253
+ 0001:000ECCD8       _SmackInternalSwitch1_case254
+ 0001:000ECCE4       _SmackInternalSwitch1_case255
+ 0001:000ECCF0       _SmackInternal010
+ 0001:000ED030       _SmackInternal011
+ 0001:000ED840       _SmackInternal012
+ 0001:000ED990       _SmackInternal013
  0001:000EDB16       j_Unsmack
  0001:000EDB20       _Unsmack
  0001:000EDEE7       j_SmackDoPCM
@@ -989,6 +1056,8 @@
  0003:0010AA2A       a1234567890Qwer
  0003:0010AA46       aAsdfghjkl
  0003:0010AA53       aZxcvbnm
+ 0003:0010AB2C       __8087
+ 0003:0010AB2D       __real87
  0003:0010ABA8       W?MyGHelpDelay$nl
  0003:0010ABB0       NetTimeoutTicks
  0003:0010AC14       W?com_dev$n[]$ComHandlerInfo$$
@@ -1005,12 +1074,35 @@
  0003:0010B4E8       _SoundAble
  0003:0010B4EA       _SoundActive
  0003:0010B4F0       _CurrentSoundMasterVolume
+ 0003:0010B4F8       __GDAptr
+ 0003:0010B4FC       __D16Infoseg
+ 0003:0010B4FE       __x386_zero_base_selector
  0003:0010B510       _locked
+ 0003:0010B518       _MusicAble
+ 0003:0010B519       _MusicActive
+ 0003:0010B51A       _CurrentDangerMusicFadeDirection
+ 0003:0010B51B       _DangerMusicVolumeChange
+ 0003:0010B756       hook_in_emu__L_S4
+ 0003:0010B758       hook_in_emu__L_S5
+ 0003:0010B78E       __Extender
+ 0003:0010B790       __X32VM
+ 0003:0010B99C       _disk_err
+ 0003:0010B9A0       _MEM_alloc
  0003:0010C660       aSample
  0003:0010C6E8       aTimb_0
  0003:0010C700       aBullfrog
  0003:0010C752       aStackOverflow
  0003:0010CB00       funcs_EB445
+ 0003:0010CF6C       ___end_dst
+ 0003:0010CF90       _timezone
+ 0003:0010CF94       ___dst_adjust
+ 0003:0010CF98       _daylight
+ 0003:0010CF9C       _stzone
+ 0003:0010CFBB       _dtzone
+ 0003:0010CFDA       _tzname
+ 0003:0010CFE2       _tzFlag
+ 0003:0010D47C       _MathFuncNames
+ 0003:0010D4D8       __RWD_matherr
  0003:0010D4DC       aSpeechMisc14Wa
  0003:0010D4EE       aSS
  0003:0010D4F3       aSpeechMisc07Wa
@@ -1898,10 +1990,14 @@
  0003:0011247C       _IsTable
  0003:001125DF       aNeduit
  0003:00112760       jpt_E0E7E
- 0003:00114CA8       name
+ 0003:00114C9C       inp
+ 0003:00114CA8       a1
  0003:001157FC       a2
+ 0003:0011581C       out
+ 0003:00117431       W?localPlayer$nuc
  0003:00117464       W?control$n$GameControl$$__Flags___bf0
- 0003:00117661       W?runFlags$n$RunTimeGameFlags$$
+ 0003:00117660       W?runFlags$n$RunTimeGameFlags$$_0
+ 0003:00117A3C       bio__players
  0003:00119670       unkn_buf_119670
  0003:00152F86       W?bio$n$BioGame$$__creatures
  0003:0015C0D6       W?bio$n$BioGame$$__plants
@@ -1922,6 +2018,8 @@
  0003:001847B6       W?tiredMMs$_Creature$n$MyMinSprite$$__delta
  0003:001847BE       W?scaredMMs$_Creature$n$MyMinSprite$$__delta
  0003:001847C6       W?huntingMMs$_Creature$n$MyMinSprite$$__delta
+ 0003:00186C2C       _lbMemoryAvailable
+ 0003:00186C48       W?memory_blocks$n__$mem_block$$__memblk_2
  0003:00188A54       _fade_table
  0003:0018CA54       _ghost_table
  0003:0019CA58       _lbDisplay
@@ -1939,7 +2037,12 @@
  0003:0019CABA       lbDisplay__OldVideoMode
  0003:0019CABC       lbDisplay__ScreenMode
  0003:0019CABE       lbDisplay__VesaIsSetUp
+ 0003:0019CABF       lbDisplay__LeftButton
+ 0003:0019CAC0       lbDisplay__RightButton
+ 0003:0019CAC1       lbDisplay__MiddleButton
  0003:0019CAC2       lbDisplay__MLeftButton
+ 0003:0019CAC3       lbDisplay__MRightButton
+ 0003:0019CAC4       lbDisplay__MMiddleButton
  0003:0019CAF0       _lbKeyOn
  0003:0019CBF0       _lbInkey
  0003:0019CD24       W?cur_flag$:.0$:?LbScreenSetDoubleBuffering$n(ul)ulnul
@@ -1999,6 +2102,13 @@
  0003:001A0A88       _vsecs
  0003:001A0A8C       _vmins
  0003:001A0A90       _vcentisecs
+ 0003:001A0AB9       _MusicInstalled
+ 0003:001A0AC4       _SongCurrentlyPlaying
+ 0003:001A0AD8       _SongHandle
+ 0003:001A0ADC       _DangerMusicFadeHandle
+ 0003:001A0AE4       _DangerMusicVolume
+ 0003:001A0AE5       _DangerMusicFadeActive
+ 0003:001A0AE6       _DangerMusicAble
  0003:001A0C94       _StreamedSoundAble
  0003:001A1430       _lbTextJustifyWindow
  0003:001A2490       _IPXHandler
@@ -2022,5 +2132,6 @@
  0003:001A2AF8       W?datagram_backup$n[]$IPXDatagramBackup$$
  0003:001A3C28       W?start_time$:.0$:?ipx_update_2$n()vnul
  0003:001A3F04       _RADICAHandler
+ 0004:001B0000       tabwidth
 
 Program entry point at 0001:0009F96C
